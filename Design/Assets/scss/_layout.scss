@@ -1,0 +1,76 @@
+.header {
+  @include flex;
+  @include width-height(100%, 70px);
+  background: $bg-head;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-size: 18px;
+  padding: 0 5%;
+
+  &-right {
+    @include flex;
+    @include width-height(80%, 100%);
+    justify-content: start;
+
+    img {
+      margin-left: 20px;
+    }
+
+    &-menu {
+      @include flex;
+      @include width-height(40%, 100%);
+      justify-content: space-around;
+      max-width: 500px;
+
+      a {
+        @include flex;
+        @extend %full-space;
+        color: $color-menu;
+
+        &:hover {
+          color: $color-hover-menu;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+
+  &-left {
+    @include flex;
+    justify-content: end;
+    width: 20%;
+
+    a {
+      color: $color-menu;
+      &:hover {
+        color: $color-hover-menu;
+      }
+    }
+  }
+}
+
+main {
+  @include flex;
+}
+
+.slider {
+  @include flex;
+  @include width-height(100%, 700px);
+  overflow-x: hidden;
+
+  img {
+    display: none;
+  }
+
+  .active {
+    @include flex;
+    width: 100%;
+    height: 100%;
+
+    img {
+      @include width-height(100%, 100%);
+      display: flex;
+      object-fit: cover;
+    }
+  }
+}
