@@ -5,6 +5,7 @@
   h2 {
     width: 40%;
     text-align: center;
+    color: $color-menu;
   }
 
   img {
@@ -94,7 +95,7 @@
     &-box {
       @include width-height(400px, 200px);
       @include flex;
-      background: $bg-box-teacher;
+      background: $bg-box;
       position: relative;
       border-radius: 15px;
       padding: 20px;
