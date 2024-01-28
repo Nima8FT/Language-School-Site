@@ -77,13 +77,12 @@ main {
 }
 
 .facilities {
-  @include width-height(80%,120px);
+  @include width-height(80%, 120px);
   @include flex;
   margin-top: 50px;
   border-radius: 15px;
   background: $color-white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin-bottom: 40px;
   padding: 10px;
 
   &-item {
@@ -91,8 +90,8 @@ main {
     width: 25%;
 
     img {
-        width: 50px;
-        margin-left: 20px;
+      width: 50px;
+      margin-left: 20px;
     }
   }
 }
