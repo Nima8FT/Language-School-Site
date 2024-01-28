@@ -4,7 +4,7 @@
   background: $bg-head;
   justify-content: space-between;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  font-size: 18px;
+  font-size: 20px;
   padding: 0 5%;
 
   &-right {
@@ -18,7 +18,7 @@
 
     &-menu {
       @include flex;
-      @include width-height(40%, 100%);
+      @include width-height(50%, 100%);
       justify-content: space-around;
       max-width: 500px;
 

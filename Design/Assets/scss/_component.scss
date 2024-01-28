@@ -1,26 +1,26 @@
+.head-title {
+  @include flex;
+  @extend %full-space;
+
+  h2 {
+    width: 40%;
+    text-align: center;
+  }
+
+  img {
+    width: 35%;
+  }
+
+  .line-right {
+    transform: rotate(180deg);
+  }
+}
+
 .boxes {
   @include width-height(80%, 100%);
   @include flex;
   flex-wrap: wrap;
   margin-top: 100px;
-
-  &-title {
-    @include flex;
-    @extend %full-space;
-
-    h2 {
-      width: 40%;
-      text-align: center;
-    }
-
-    img {
-      width: 35%;
-    }
-
-    .line-right {
-      transform: rotate(180deg);
-    }
-  }
 
   &-list {
     @include flex;
@@ -31,10 +31,10 @@
       position: relative;
       overflow-x: hidden;
       overflow-y: hidden;
-      margin-bottom: 100px;
       border-radius: 5px;
       cursor: pointer;
       margin: 20px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
       &-img {
         position: relative;
@@ -45,7 +45,7 @@
         position: absolute;
         opacity: 0.9;
         left: 0;
-        bottom: 7px;
+        bottom: 0;
       }
 
       &-title {
@@ -73,6 +73,59 @@
             color: $color-hover-menu;
             margin-left: 10px;
           }
+        }
+      }
+    }
+  }
+}
+
+.teachers {
+  @include width-height(80%, 100%);
+  @include flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+
+  &-list {
+    @include width-height(100%, 100%);
+    @include flex;
+    flex-wrap: wrap;
+    margin-top: 70px;
+
+    &-box {
+      @include width-height(400px, 200px);
+      @include flex;
+      background: $bg-box-teacher;
+      position: relative;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      margin: 50px;
+
+      img {
+        width: 100px;
+        position: absolute;
+        border-radius: 100%;
+        top: -30%;
+      }
+
+      &-title {
+        @include width-height(100%, 100%);
+        overflow-y: hidden;
+
+        h4 {
+          text-align: center;
+          font-size: 22px;
+          color: $color-hover-menu;
+          margin-top: 30px;
+        }
+
+        p {
+          margin-top: 5px;
+          width: 100%;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
       }
     }
