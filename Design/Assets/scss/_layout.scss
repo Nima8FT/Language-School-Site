@@ -184,12 +184,13 @@ main {
     @include flex;
 
     &-right {
-      @include width-height(60%,100%);
+      @include width-height(70%,100%);
       padding: 10px;
 
       &-img {
         @include width-height(100%,30%);
         text-align: center;
+        margin-bottom: 30px;
 
         img {
           margin-left: 10px;
@@ -200,6 +201,7 @@ main {
       &-title {
         @include width-height(100%,70%);
         @include flex;
+        justify-content: start;
         padding: 10px;
 
         &-right {
@@ -227,6 +229,7 @@ main {
           &-bottom {
             width: 51%;
             @include flex;
+            justify-content: start;
             flex-wrap: wrap;
             text-align: center;
 
@@ -278,7 +281,7 @@ main {
     }
 
     &-left {
-      @include width-height(40%,100%);
+      @include width-height(30%,100%);
       @include flex;
 
       img {
@@ -292,6 +295,7 @@ main {
     background: $bg-bottom-footer;
     text-align: center;
     padding: 15px;
+    margin-top: 15px;
 
     p {
       z-index: 5;
