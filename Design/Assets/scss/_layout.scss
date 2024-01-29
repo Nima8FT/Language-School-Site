@@ -167,9 +167,134 @@ main {
     }
 
     p {
-        margin: 10px;
-        text-align: justify;
-        font-size: 18px;
+      margin: 10px;
+      text-align: justify;
+      font-size: 18px;
+    }
+  }
+}
+
+.footer {
+  @include width-height(100%, 100%);
+  background: $color-hover-menu;
+  color: $color-white;
+
+  &-top {
+    @include width-height(100%, 80%);
+    @include flex;
+
+    &-right {
+      @include width-height(60%,100%);
+      padding: 10px;
+
+      &-img {
+        @include width-height(100%,30%);
+        text-align: center;
+
+        img {
+          margin-left: 10px;
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        }
+      }
+
+      &-title {
+        @include width-height(100%,70%);
+        @include flex;
+        padding: 10px;
+
+        &-right {
+          @include width-height(50%,360px);
+          @include flex;
+          flex-wrap: wrap;
+
+          h4 {
+            font-size: 26px;
+          }
+
+          p {
+            margin-right: 20px;
+          }
+
+          img {
+            margin: 10px
+          }
+
+          &-top,
+          &-bottom {
+            @include width-height(51%,50%);
+          }
+
+          &-bottom {
+            width: 51%;
+            @include flex;
+            flex-wrap: wrap;
+            text-align: center;
+
+            h4,
+            p {
+              width: 100%;
+              text-align: right;
+            }
+          }
+        }
+
+        &-left {
+          @include width-height(50%,360px);
+          @include flex;
+          flex-wrap: wrap;
+          justify-content: start;
+
+          h4 {
+            @include width-height(100%,auto);
+            font-size: 26px;
+            margin-bottom: 10px
+          }
+
+          div {
+            @include width-height(100%,20%);
+            @include flex;
+            flex-wrap: wrap;
+            justify-content: start;
+
+            img {
+              margin-left: 20px;
+              width: 35px;
+            }
+
+            .title {
+              width: 50%;
+              height: 100%;
+              @include flex;
+              flex-wrap: wrap;
+
+              p {
+                width: 100%;
+              }
+            }
+          }
+
+        }
+      }
+    }
+
+    &-left {
+      @include width-height(40%,100%);
+      @include flex;
+
+      img {
+        width: 400px;
+      }
+    }
+  }
+
+  &-bottom {
+    @include width-height(100%, 20%);
+    background: $bg-bottom-footer;
+    text-align: center;
+    padding: 15px;
+
+    p {
+      z-index: 5;
     }
   }
 }
