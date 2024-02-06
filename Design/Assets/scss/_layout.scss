@@ -42,6 +42,7 @@
 
     a {
       color: $color-menu;
+
       &:hover {
         color: $color-hover-menu;
       }
@@ -54,26 +55,64 @@ main {
   flex-wrap: wrap;
 }
 
-.slider {
-  @include flex;
-  @include width-height(100%, 700px);
-  overflow-x: hidden;
+.slider-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 
-  img {
-    display: none;
-  }
-
-  .active {
-    @include flex;
-    width: 100%;
+  .slider {
+    display: flex;
+    width: 300%;
     height: 100%;
+    transition: transform 0.5s ease-in-out;
 
-    img {
-      @include width-height(100%, 100%);
-      display: flex;
-      object-fit: cover;
+    .slide {
+      flex: 1;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
     }
   }
+
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    padding: 10px;
+    margin: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 100px;
+    opacity: 0.7;
+    transition: all ease-in-out 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  #prevBtn {
+    right: 0px;
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  
+  #nextBtn {
+    left: 0px;
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  
+  svg {
+    width: 30px;
+  }
+
 }
 
 .facilities {
@@ -184,11 +223,11 @@ main {
     @include flex;
 
     &-right {
-      @include width-height(70%,100%);
+      @include width-height(70%, 100%);
       padding: 10px;
 
       &-img {
-        @include width-height(100%,30%);
+        @include width-height(100%, 30%);
         text-align: center;
         margin-bottom: 30px;
 
@@ -199,13 +238,13 @@ main {
       }
 
       &-title {
-        @include width-height(100%,70%);
+        @include width-height(100%, 70%);
         @include flex;
         justify-content: start;
         padding: 10px;
 
         &-right {
-          @include width-height(50%,360px);
+          @include width-height(50%, 360px);
           @include flex;
           flex-wrap: wrap;
 
@@ -223,7 +262,7 @@ main {
 
           &-top,
           &-bottom {
-            @include width-height(51%,50%);
+            @include width-height(51%, 50%);
           }
 
           &-bottom {
@@ -242,19 +281,19 @@ main {
         }
 
         &-left {
-          @include width-height(50%,360px);
+          @include width-height(50%, 360px);
           @include flex;
           flex-wrap: wrap;
           justify-content: start;
 
           h4 {
-            @include width-height(100%,auto);
+            @include width-height(100%, auto);
             font-size: 26px;
             margin-bottom: 10px
           }
 
           div {
-            @include width-height(100%,20%);
+            @include width-height(100%, 20%);
             @include flex;
             flex-wrap: wrap;
             justify-content: start;
@@ -281,7 +320,7 @@ main {
     }
 
     &-left {
-      @include width-height(30%,100%);
+      @include width-height(30%, 100%);
       @include flex;
 
       img {
