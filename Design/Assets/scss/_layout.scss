@@ -1,4 +1,6 @@
 .header {
+  position: fixed !important;
+  z-index: 99;
   @include flex;
   @include width-height(100%, 70px);
   background: $bg-head;
@@ -14,6 +16,7 @@
 
     img {
       margin-left: 20px;
+      cursor: pointer;
     }
 
     &-menu {
@@ -26,6 +29,7 @@
         @include flex;
         @extend %full-space;
         color: $color-menu;
+        cursor: pointer;
 
         &:hover {
           color: $color-hover-menu;
@@ -42,6 +46,7 @@
 
     a {
       color: $color-menu;
+      cursor: pointer;
 
       &:hover {
         color: $color-hover-menu;
