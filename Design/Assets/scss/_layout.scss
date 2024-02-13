@@ -166,11 +166,12 @@ main {
 
         h4 {
           font-size: 22px;
-          color: $color-hover-menu;
+          color: $color-title;
           margin-bottom: 10px;
         }
 
         p {
+          color: $color-des;
           font-size: 18px;
           width: 100%;
           display: -webkit-box;
@@ -209,10 +210,20 @@ main {
       margin-bottom: 50px;
     }
 
-    p {
-      margin: 10px;
-      text-align: justify;
-      font-size: 18px;
+    div {
+      margin: 10px 0;
+
+      h3 {
+        font-size: 24px;
+        color: $color-title;
+      }
+
+      p {
+        color: $color-des;
+        margin: 10px;
+        text-align: justify;
+        font-size: 18px;
+      }
     }
   }
 }
@@ -237,12 +248,21 @@ main {
       flex-wrap: wrap;
       padding: 20px;
       max-width: 350px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
       h3 {
         width: 100%;
         margin: 10px 0;
         text-align: right;
-        color: $color-hover-menu;
+        color: $color-title;
+      }
+
+      p {
+        color: $color-des;
+        display: -webkit-box;
+        -webkit-line-clamp: 8;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
     }
   }
