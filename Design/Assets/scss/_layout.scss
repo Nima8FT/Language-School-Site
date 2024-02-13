@@ -105,7 +105,7 @@ main {
       transform: rotate(180deg);
     }
   }
-  
+
   #nextBtn {
     left: 0px;
 
@@ -113,11 +113,10 @@ main {
       transform: rotate(180deg);
     }
   }
-  
+
   svg {
     width: 30px;
   }
-
 }
 
 .facilities {
@@ -218,6 +217,37 @@ main {
   }
 }
 
+.comments {
+  @include width-height(80%, 100%);
+  @include flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+
+  &-bottom {
+    @include flex;
+    flex-wrap: wrap;
+    margin: 40px;
+
+    &-box {
+      @include width-height(30%, 100%);
+      @include flex;
+      background: $color-white;
+      border-radius: 10px;
+      margin: 40px;
+      flex-wrap: wrap;
+      padding: 20px;
+      max-width: 350px;
+
+      h3 {
+        width: 100%;
+        margin: 10px 0;
+        text-align: right;
+        color: $color-hover-menu;
+      }
+    }
+  }
+}
+
 .footer {
   @include width-height(100%, 100%);
   background: $color-hover-menu;
@@ -262,7 +292,7 @@ main {
           }
 
           img {
-            margin: 10px
+            margin: 10px;
           }
 
           &-top,
@@ -294,7 +324,7 @@ main {
           h4 {
             @include width-height(100%, auto);
             font-size: 26px;
-            margin-bottom: 10px
+            margin-bottom: 10px;
           }
 
           div {
@@ -319,7 +349,6 @@ main {
               }
             }
           }
-
         }
       }
     }
