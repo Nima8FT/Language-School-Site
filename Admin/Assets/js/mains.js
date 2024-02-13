@@ -66,7 +66,7 @@ $(document).ready(function () {
     let id, name, img;
     for (let i = 0; i < child.length; i++) {
       if ($(child[i]).attr("id") == "id") id = child[i].innerText;
-      if ($(child[i]).attr("id") == "name") name = child[i].innerText;
+      if ($(child[i]).attr("id") == "title") name = child[i].innerText;
       if ($(child[i]).attr("id").includes("img")) {
         img = $(child[i].children[0]).attr("src");
         break;

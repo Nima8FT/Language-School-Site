@@ -2,6 +2,29 @@
 
 require_once('function.php');
 
+if (isset($_POST['action'])) {
+
+    $AC = $_POST['action'];
+    unset($_POST['action']);
+
+    $Table = $_POST['Table'];
+    unset($_POST['Table']);
+
+    if (isset($_POST['id'])) {
+        $ID = $_POST['id'];
+        unset($_POST['id']);
+    }
+
+    if ($AC == "Insert")
+        Insert($Table, $_POST);
+    else if ($AC == "Update")
+        Update($Table, $_POST, $ID);
+    else if ($AC == "Delete")
+        Delete($Table, $ID);
+
+    ReDirect($URL);
+}
+
 ?>
 
 <!DOCTYPE html>

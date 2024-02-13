@@ -110,16 +110,20 @@ function HtmlRow($Table, $Exc)
                     if ($Exc[$j] == $key) {
                         $is_Exc = true;
                         // '<img src="./Assets/img/Movie/Poster_Brave.jpg" alt="">'
-                        if (str_contains($val, '.jpg') || str_contains($val, '.png') || str_contains($val, '.gif'))
-                            $html .= '<td style="display:none;" class="main__table_' . $key . '" id="' . $key . '"><img src="' . HomeURL  . $val . '" alt="' . $response[$i]['name'] . '"></td>';
-                        else
+                        if (str_contains($val, '.jpg') || str_contains($val, '.png') || str_contains($val, '.gif')) {
+                            $split = explode('..', $val);
+                            $img_name = 'Assets/' . $split[1];
+                            $html .= '<td style="display:none;" class="main__table_' . $key . '" id="' . $key . '"><img src="' . $img_name . '" alt="' . $response[$i]['name'] . '"></td>';
+                        } else
                             $html .= '<td style="display:none;" class="main__table_' . $key . '" id="' . $key . '"><div>' . htmlspecialchars($val) . '</div></td>';
                     }
 
                 if ($is_Exc == false)
-                    if (str_contains($val, '.jpg') || str_contains($val, '.png') || str_contains($val, '.gif'))
-                        $html .= '<td class="main__table_' . $key . '" id="' . $key . '"><img src="' . HomeURL  . $val . '" alt="' . $response[$i]['name'] . '"></td>';
-                    else
+                    if (str_contains($val, '.jpg') || str_contains($val, '.png') || str_contains($val, '.gif')) {
+                        $split = explode('..', $val);
+                        $img_name = 'Assets/' . $split[1];
+                        $html .= '<td class="main__table_' . $key . '" id="' . $key . '"><img src="' . $img_name . '" alt="' . $response[$i]['name'] . '"></td>';
+                    } else
                         $html .= '<td class="main__table_' . $key . '" id="' . $key . '"><div>' . htmlspecialchars($val) . '</div></td>';
             }
 
@@ -136,16 +140,20 @@ function HtmlRow($Table, $Exc)
                 if ($Exc[$j] == $key) {
                     $is_Exc = true;
                     // '<img src="./Assets/img/Movie/Poster_Brave.jpg" alt="">'
-                    if (str_contains($val, '.jpg') || str_contains($val, '.png') || str_contains($val, '.gif'))
-                        $html .= '<td style="display:none;" class="main__table_' . $key . '" id="' . $key . '"><img src="' . HomeURL  . $val . '" alt="' . $response[$j]['name'] . '"></td>';
-                    else
+                    if (str_contains($val, '.jpg') || str_contains($val, '.png') || str_contains($val, '.gif')) {
+                        $split = explode('..', $val);
+                        $img_name = 'Assets/' . $split[1];
+                        $html .= '<td style="display:none;" class="main__table_' . $key . '" id="' . $key . '"><img src="' . $img_name . '" alt="' . $response[$j]['name'] . '"></td>';
+                    } else
                         $html .= '<td style="display:none;" class="main__table_' . $key . '" id="' . $key . '"><div>' . htmlspecialchars($val) . '</div></td>';
                 }
 
             if ($is_Exc == false)
-                if (str_contains($val, '.jpg') || str_contains($val, '.png') || str_contains($val, '.gif'))
-                    $html .= '<td class="main__table_' . $key . '" id="' . $key . '"><img src="' . HomeURL  . $val . '" alt="' . $response[$j]['name'] . '"></td>';
-                else
+                if (str_contains($val, '.jpg') || str_contains($val, '.png') || str_contains($val, '.gif')) {
+                    $split = explode('..', $val);
+                    $img_name = 'Assets/' . $split[1];
+                    $html .= '<td class="main__table_' . $key . '" id="' . $key . '"><img src="' . $img_name . '" alt="' . $response[$j]['name'] . '"></td>';
+                } else
                     $html .= '<td class="main__table_' . $key . '" id="' . $key . '"><div>' . htmlspecialchars($val) . '</div></td>';
         }
         $html .= '<td class="main_info__actions" id="actions"><i class="icon-trash-regular del"></i></td>';
@@ -156,8 +164,58 @@ function HtmlRow($Table, $Exc)
     echo $html;
 }
 
-function UploadFiles()
+function HtmlFormEdit($Table)
 {
+    $response = ReqAPI('http://localhost/Language-School-Site/Api/index.php', array(
+        "Mode" => "QUERY",
+        "Query" => "DESCRIBE " . $Table
+    ));
+
+    $html = "";
+    for ($i = 0; $i < count($response); $i++) {
+
+        if ($response[$i]['Type'] == 'text' && str_contains($response[$i]['Field'], 'img'))
+            $html .= '<div class="input_label">' .
+                '<label for="' . $response[$i]['Field'] . '">' . $response[$i]['Field'] . '</label>' .
+                '<input id="' . $response[$i]['Field'] . '" name="' . $response[$i]['Field'] . '" type="file" style="display: none;">' .
+                '<input type="button" value="Select File" onclick="document.getElementsByName(\'' . $response[$i]['Field'] . '\')[0].click();" /></div>';
+
+        else if ($response[$i]['Type'] == 'mediumtext' || $response[$i]['Type'] == 'longtext')
+            $html .= '<div class="input_label textarea">' .
+                '<label for="' . $response[$i]['Field'] . '">' . $response[$i]['Field'] . '</label>' .
+                '<textarea id="input_' . $response[$i]['Field'] . '" name="' . $response[$i]['Field'] . '" type="text" ></textarea></div>';
+        else
+            $html .= '<div class="input_label">' .
+                '<label for="' . $response[$i]['Field'] . '">' . $response[$i]['Field'] . '</label>' .
+                '<input id="input_' . $response[$i]['Field'] . '" name="' . $response[$i]['Field'] . '" type="text"></div>';
+    }
+
+    echo $html;
+}
+
+function UploadFiles($img_name, $Table)
+{
+    foreach ($_FILES as $key => $value) {
+        if ($value['name'] !== "") {
+            $f_name = explode('.', $value['name']);
+            $format = $f_name[count($f_name) - 1];
+
+            $img_dir = "";
+            if ($Table == "box") {
+                $img_dir = __DIR__ . '/../img/box/' . $img_name . '.' . $format;
+            } else if ($Table == "personal") {
+                $img_dir = __DIR__ . '/../img/personal/' . $img_name . '.' . $format;
+            } else if ($Table == "news") {
+                $img_dir = __DIR__ . '/../img/news/' . $img_name . '.' . $format;
+            } else if ($Table == "slider") {
+                $img_dir = __DIR__ . '/../img/slider/' . $img_name . '.' . $format;
+            }
+
+            $img_tmp = $value['tmp_name'];
+            move_uploaded_file($img_tmp, $img_dir);
+            $_POST[$key] = $img_dir;
+        }
+    }
 }
 
 function Insert($Table, $POST)
@@ -167,9 +225,10 @@ function Insert($Table, $POST)
     $Values = "";
     $i = 1;
 
-
-    if (isset($POST['name']) && isset($_FILES))
-        UploadFiles($POST['name'], $Table);
+    if (isset($_FILES)) {
+        $img_name = time() . $Table . rand(10, 100);
+        UploadFiles($img_name, $Table);
+    }
     $POST = $_POST;
 
     foreach ($POST as $key => $val) {
@@ -204,8 +263,10 @@ function Update($Table, $POST, $id)
     $Values = "";
     $i = 1;
 
-    if (isset($POST['name']) && isset($_FILES))
-        UploadFiles($POST['name'], $Table);
+    if (isset($_FILES)) {
+        $img_name = time() . $Table . rand(10, 100);
+        UploadFiles($img_name, $Table);
+    }
 
     $POST = $_POST;
 
