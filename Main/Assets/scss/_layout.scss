@@ -1,0 +1,397 @@
+.header {
+  position: fixed !important;
+  z-index: 99;
+  @include flex;
+  @include width-height(100%, 70px);
+  background: $bg-head;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-size: 20px;
+  padding: 0 5%;
+
+  &-right {
+    @include flex;
+    @include width-height(80%, 100%);
+    justify-content: start;
+
+    img {
+      margin-left: 20px;
+      cursor: pointer;
+    }
+
+    &-menu {
+      @include flex;
+      @include width-height(50%, 100%);
+      justify-content: space-around;
+      max-width: 500px;
+
+      a {
+        @include flex;
+        @extend %full-space;
+        color: $color-menu;
+        cursor: pointer;
+
+        &:hover {
+          color: $color-hover-menu;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+
+  &-left {
+    @include flex;
+    justify-content: end;
+    width: 20%;
+
+    a {
+      color: $color-menu;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-hover-menu;
+      }
+    }
+  }
+}
+
+main {
+  @include flex;
+  flex-wrap: wrap;
+}
+
+.slider-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  .slider {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+
+    .slide {
+      flex: 1;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    padding: 10px;
+    margin: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 100px;
+    opacity: 0.7;
+    transition: all ease-in-out 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  #prevBtn {
+    right: 0px;
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  #nextBtn {
+    left: 0px;
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  svg {
+    width: 30px;
+  }
+}
+
+.facilities {
+  @include width-height(80%, 120px);
+  @include flex;
+  margin-top: 50px;
+  border-radius: 15px;
+  background: $color-white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 10px;
+
+  &-item {
+    @include flex;
+    width: 25%;
+
+    img {
+      width: 50px;
+      margin-left: 20px;
+    }
+  }
+}
+
+.news {
+  @include width-height(80%, 100%);
+  @include flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+
+  &-list {
+    @include width-height(100%, 100%);
+    @include flex;
+    flex-wrap: wrap;
+    margin-top: 70px;
+
+    &-box {
+      @include width-height(100%, 100%);
+      @include flex;
+      justify-content: space-between;
+      background: $bg-box;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+      &-title {
+        @include width-height(55%, 200px);
+
+        h4 {
+          font-size: 22px;
+          color: $color-title;
+          margin-bottom: 10px;
+        }
+
+        p {
+          color: $color-des;
+          font-size: 18px;
+          width: 100%;
+          display: -webkit-box;
+          -webkit-line-clamp: 5;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-align: justify;
+        }
+      }
+
+      img {
+        width: 400px;
+        height: 200px;
+      }
+    }
+  }
+}
+
+.about {
+  @include width-height(80%, 100%);
+  @include flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+
+  &-title {
+    @include width-height(80%, 100%);
+    @include flex;
+    margin-top: 60px;
+    flex-wrap: wrap;
+
+    img {
+      @include width-height(100%, 100%);
+      display: flex;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 50px;
+    }
+
+    div {
+      margin: 10px 0;
+
+      h3 {
+        font-size: 24px;
+        color: $color-title;
+      }
+
+      p {
+        color: $color-des;
+        margin: 10px;
+        text-align: justify;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.comments {
+  @include width-height(80%, 100%);
+  @include flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+
+  &-bottom {
+    @include flex;
+    flex-wrap: wrap;
+    margin: 40px;
+
+    &-box {
+      @include width-height(30%, 100%);
+      @include flex;
+      background: $color-white;
+      border-radius: 10px;
+      margin: 40px;
+      flex-wrap: wrap;
+      padding: 20px;
+      max-width: 350px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+      h3 {
+        width: 100%;
+        margin: 10px 0;
+        text-align: right;
+        color: $color-title;
+      }
+
+      p {
+        color: $color-des;
+        display: -webkit-box;
+        -webkit-line-clamp: 8;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.footer {
+  @include width-height(100%, 100%);
+  background: $color-hover-menu;
+  color: $color-white;
+
+  &-top {
+    @include width-height(100%, 80%);
+    @include flex;
+
+    &-right {
+      @include width-height(50%, 100%);
+      padding: 10px;
+
+      &-img {
+        @include width-height(100%, 30%);
+        text-align: center;
+        margin-bottom: 30px;
+
+        img {
+          margin-left: 10px;
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        }
+      }
+
+      &-title {
+        @include width-height(100%, 70%);
+        @include flex;
+        justify-content: start;
+        padding: 10px;
+
+        &-right {
+          @include width-height(50%, 360px);
+          @include flex;
+          flex-wrap: wrap;
+
+          h4 {
+            font-size: 26px;
+          }
+
+          p {
+            margin-right: 20px;
+          }
+
+          img {
+            margin: 10px;
+          }
+
+          &-top,
+          &-bottom {
+            @include width-height(51%, 50%);
+          }
+
+          &-bottom {
+            width: 51%;
+            @include flex;
+            justify-content: start;
+            flex-wrap: wrap;
+            text-align: center;
+
+            h4,
+            p {
+              width: 100%;
+              text-align: right;
+            }
+          }
+        }
+
+        &-left {
+          @include width-height(50%, 360px);
+          @include flex;
+          flex-wrap: wrap;
+          justify-content: start;
+
+          h4 {
+            @include width-height(100%, auto);
+            font-size: 26px;
+            margin-bottom: 10px;
+          }
+
+          div {
+            @include width-height(100%, 20%);
+            @include flex;
+            flex-wrap: wrap;
+            justify-content: start;
+
+            img {
+              margin-left: 20px;
+              width: 35px;
+            }
+
+            .title {
+              width: 50%;
+              height: 100%;
+              @include flex;
+              flex-wrap: wrap;
+
+              p {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-left {
+      @include width-height(50%, 100%);
+      @include flex;
+
+      img {
+        width: 400px;
+      }
+    }
+  }
+
+  &-bottom {
+    @include width-height(100%, 20%);
+    background: $bg-bottom-footer;
+    text-align: center;
+    padding: 15px;
+    margin-top: 15px;
+
+    p {
+      z-index: 5;
+    }
+  }
+}

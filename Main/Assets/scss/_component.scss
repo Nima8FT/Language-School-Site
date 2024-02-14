@@ -1,0 +1,135 @@
+.head-title {
+  @include flex;
+  @extend %full-space;
+
+  h2 {
+    width: 40%;
+    text-align: center;
+    color: $color-menu;
+  }
+
+  img {
+    width: 35%;
+  }
+
+  .line-right {
+    transform: rotate(180deg);
+  }
+}
+
+.boxes {
+  @include width-height(80%, 100%);
+  @include flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+
+  &-list {
+    @include flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+
+    .box {
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 20px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+      &-img {
+        position: relative;
+        z-index: -1;
+      }
+
+      &-title-img {
+        position: absolute;
+        opacity: 0.9;
+        left: 0;
+        bottom: 0;
+      }
+
+      &-title {
+        @include width-height(100%, 40%);
+        position: absolute;
+        bottom: 0;
+        padding: 20px;
+
+        &-top {
+          @include width-height(100%, 30%);
+          display: flex;
+          justify-content: space-between;
+        }
+
+        &-main {
+          @include width-height(100%, 50%);
+        }
+
+        &-bottom {
+          @include width-height(100%, 20%);
+          @include flex;
+          justify-content: end;
+
+          p {
+            color: $color-hover-menu;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.teachers {
+  @include width-height(80%, 100%);
+  @include flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+
+  &-list {
+    @include width-height(100%, 100%);
+    @include flex;
+    flex-wrap: wrap;
+    margin-top: 70px;
+
+    &-box {
+      @include width-height(400px, 200px);
+      @include flex;
+      background: $bg-box;
+      position: relative;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      margin: 50px;
+
+      img {
+        width: 100px;
+        position: absolute;
+        border-radius: 100%;
+        top: -30%;
+      }
+
+      &-title {
+        @include width-height(100%, 100%);
+        overflow-y: hidden;
+
+        h4 {
+          text-align: center;
+          font-size: 22px;
+          color: $color-title;
+          margin-top: 30px;
+        }
+
+        p {
+          color: $color-des;
+          margin-top: 5px;
+          width: 100%;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
