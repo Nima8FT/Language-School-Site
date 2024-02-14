@@ -1,3 +1,11 @@
+<?php
+
+if (isset($_POST['logOut'])) {
+    Logout();
+}
+
+?>
+
 <main>
 
     <aside class="menu">

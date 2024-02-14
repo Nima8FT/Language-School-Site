@@ -92,7 +92,8 @@ button {
     font-family: 'IS_web_bold';
     font-size: 18px;
 }
-button:hover{
+
+button:hover {
     cursor: pointer;
     opacity: 1;
 }
