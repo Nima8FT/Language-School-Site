@@ -63,8 +63,13 @@ require_once('./Assets/php/header.php');
 
     <section class="boxes-list">
 
-        <?php BoxSadr(); ?>
+        <?php BoxSadr('filter'); ?>
 
+    </section>
+
+    <section class="show">
+        <a href="box-sadr.php">نمایش دوره های بیشتر</a>
+        <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 
 </article>
@@ -79,8 +84,13 @@ require_once('./Assets/php/header.php');
 
     <section class="boxes-list">
 
-        <?php BoxBaghai() ?>
+        <?php BoxBaghai('filter') ?>
 
+    </section>
+
+    <section class="show">
+        <a href="box-baghai.php">نمایش دوره های بیشتر</a>
+        <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 
 </article>
@@ -95,8 +105,13 @@ require_once('./Assets/php/header.php');
 
     <section class="teachers-list">
 
-        <?php TeacherSadr(); ?>
+        <?php TeacherSadr('filter'); ?>
 
+    </section>
+
+    <section class="show">
+        <a href="teacher-sadr.php">نمایش دوره های بیشتر</a>
+        <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 
 </article>
@@ -111,8 +126,13 @@ require_once('./Assets/php/header.php');
 
     <section class="teachers-list">
 
-        <?php TeacherBaghai(); ?>
+        <?php TeacherBaghai('filter'); ?>
 
+    </section>
+
+    <section class="show">
+        <a href="teacher-baghai.php">نمایش دوره های بیشتر</a>
+        <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 
 </article>
@@ -127,8 +147,13 @@ require_once('./Assets/php/header.php');
 
     <section class="news-list">
 
-        <?php News(); ?>
+        <?php News('filter'); ?>
 
+    </section>
+
+    <section class="show">
+        <a href="news.php">نمایش دوره های بیشتر</a>
+        <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 
 </article>
@@ -158,8 +183,13 @@ require_once('./Assets/php/header.php');
 
     <section class="teachers-list">
 
-        <?php PersonalSadr(); ?>
+        <?php PersonalSadr('filter'); ?>
 
+    </section>
+
+    <section class="show">
+        <a href="personal-sadr.php">نمایش دوره های بیشتر</a>
+        <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 
 </article>
@@ -174,8 +204,13 @@ require_once('./Assets/php/header.php');
 
     <section class="teachers-list">
 
-        <?php PersonalBaghai(); ?>
+        <?php PersonalBaghai('filter'); ?>
 
+    </section>
+
+    <section class="show">
+        <a href="personal-baghai.php">نمایش دوره های بیشتر</a>
+        <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 
 </article>

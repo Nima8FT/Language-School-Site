@@ -67,7 +67,7 @@ function Slider()
 }
 
 
-function BoxSadr()
+function BoxSadr($show)
 {
 
     $response = ReqAPI('http://localhost/Language-School-Site/Api/index.php', array(
@@ -83,7 +83,9 @@ function BoxSadr()
         $img_name = '../Admin/Assets' . $img_split[1];
 
         if (strtolower($db['mode']) == 'sadr') {
-            $html .= '
+            if ($show == 'filter') {
+                if (strtolower($db['show']) == 'true') {
+                    $html .= '
             <div class="box">
                 <img class="box-img" src="' . $img_name . '" alt="Book">
                 <img class="box-title-img" src="./Assets/images/title-box.png" alt="Title Box">
@@ -103,13 +105,36 @@ function BoxSadr()
                 </div>
                 </div>
             ';
+                }
+            } else {
+                $html .= '
+                <div class="box">
+                    <img class="box-img" src="' . $img_name . '" alt="Book">
+                    <img class="box-title-img" src="./Assets/images/title-box.png" alt="Title Box">
+                    <div class="box-title">
+                        <div class="box-title-top">
+                            <p>از ' . $db['date'] . '</p>
+                            <p>تعداد جلسه: ' . $db['number'] . '</p>
+                        </div>
+                        <div class="box-title-main">
+                            <h2>' . $db['title'] . '</h2>
+                            <h4>مدرس: ' . $db['teacher'] . '</h4>
+                        </div>
+                        <div class="box-title-bottom">
+                            <p>ادامه مطلب</p>
+                            <img src="./Assets/images/edame.png" alt="arrow">
+                        </div>
+                    </div>
+                    </div>
+                ';
+            }
         }
     }
 
     echo $html;
 }
 
-function BoxBaghai()
+function BoxBaghai($show)
 {
 
     $response = ReqAPI('http://localhost/Language-School-Site/Api/index.php', array(
@@ -125,7 +150,9 @@ function BoxBaghai()
         $img_name = '../Admin/Assets' . $img_split[1];
 
         if (strtolower($db['mode']) == 'baghai') {
-            $html .= '
+            if ($show == 'filter') {
+                if (strtolower($db['show']) == 'true') {
+                    $html .= '
             <div class="box">
                 <img class="box-img" src="' . $img_name . '" alt="Book">
                 <img class="box-title-img" src="./Assets/images/title-box.png" alt="Title Box">
@@ -145,13 +172,36 @@ function BoxBaghai()
                 </div>
                 </div>
             ';
+                }
+            } else {
+                $html .= '
+                <div class="box">
+                    <img class="box-img" src="' . $img_name . '" alt="Book">
+                    <img class="box-title-img" src="./Assets/images/title-box.png" alt="Title Box">
+                    <div class="box-title">
+                        <div class="box-title-top">
+                            <p>از ' . $db['date'] . '</p>
+                            <p>تعداد جلسه: ' . $db['number'] . '</p>
+                        </div>
+                        <div class="box-title-main">
+                            <h2>' . $db['title'] . '</h2>
+                            <h4>مدرس: ' . $db['teacher'] . '</h4>
+                        </div>
+                        <div class="box-title-bottom">
+                            <p>ادامه مطلب</p>
+                            <img src="./Assets/images/edame.png" alt="arrow">
+                        </div>
+                    </div>
+                    </div>
+                ';
+            }
         }
     }
 
     echo $html;
 }
 
-function TeacherSadr()
+function TeacherSadr($show)
 {
     $response = ReqAPI('http://localhost/Language-School-Site/Api/index.php', array(
         "Mode" => "QUERY",
@@ -167,15 +217,29 @@ function TeacherSadr()
 
         if (strtolower($db['mode']) == 'teacher') {
             if (strtolower($db['institutions']) == 'sadr') {
-                $html .= '
-                <div class="teachers-list-box">
+                if ($show == 'filter') {
+                    if (strtolower($db['show']) == "true") {
+                        $html .= '
+                    <div class="teachers-list-box">
                 <img src="' . $img_name . '" alt="' . $db['name'] . '">
                 <div class="teachers-list-box-title">
                     <h4>' . $db['name'] . '</h4>
                     <p>' . $db['des'] . '</p>
                 </div>
             </div>
-                ';
+            ';
+                    }
+                } else {
+                    $html .= '
+                    <div class="teachers-list-box">
+                <img src="' . $img_name . '" alt="' . $db['name'] . '">
+                <div class="teachers-list-box-title">
+                    <h4>' . $db['name'] . '</h4>
+                    <p>' . $db['des'] . '</p>
+                </div>
+            </div>
+            ';
+                }
             }
         }
     }
@@ -183,7 +247,7 @@ function TeacherSadr()
     echo $html;
 }
 
-function TeacherBaghai()
+function TeacherBaghai($show)
 {
     $response = ReqAPI('http://localhost/Language-School-Site/Api/index.php', array(
         "Mode" => "QUERY",
@@ -199,15 +263,29 @@ function TeacherBaghai()
 
         if (strtolower($db['mode']) == 'teacher') {
             if (strtolower($db['institutions']) == 'baghai') {
-                $html .= '
-                <div class="teachers-list-box">
+                if ($show == 'filter') {
+                    if (strtolower($db['show']) == "true") {
+                        $html .= '
+                    <div class="teachers-list-box">
                 <img src="' . $img_name . '" alt="' . $db['name'] . '">
                 <div class="teachers-list-box-title">
                     <h4>' . $db['name'] . '</h4>
                     <p>' . $db['des'] . '</p>
                 </div>
             </div>
-                ';
+            ';
+                    }
+                } else {
+                    $html .= '
+                    <div class="teachers-list-box">
+                <img src="' . $img_name . '" alt="' . $db['name'] . '">
+                <div class="teachers-list-box-title">
+                    <h4>' . $db['name'] . '</h4>
+                    <p>' . $db['des'] . '</p>
+                </div>
+            </div>
+            ';
+                }
             }
         }
     }
@@ -215,7 +293,7 @@ function TeacherBaghai()
     echo $html;
 }
 
-function PersonalSadr()
+function PersonalSadr($show)
 {
     $response = ReqAPI('http://localhost/Language-School-Site/Api/index.php', array(
         "Mode" => "QUERY",
@@ -231,15 +309,29 @@ function PersonalSadr()
 
         if (strtolower($db['mode']) == 'personal') {
             if (strtolower($db['institutions']) == 'sadr') {
-                $html .= '
-                <div class="teachers-list-box">
+                if ($show == 'filter') {
+                    if (strtolower($db['show']) == "true") {
+                        $html .= '
+                    <div class="teachers-list-box">
                 <img src="' . $img_name . '" alt="' . $db['name'] . '">
                 <div class="teachers-list-box-title">
                     <h4>' . $db['name'] . '</h4>
                     <p>' . $db['des'] . '</p>
                 </div>
             </div>
-                ';
+            ';
+                    }
+                } else {
+                    $html .= '
+                    <div class="teachers-list-box">
+                <img src="' . $img_name . '" alt="' . $db['name'] . '">
+                <div class="teachers-list-box-title">
+                    <h4>' . $db['name'] . '</h4>
+                    <p>' . $db['des'] . '</p>
+                </div>
+            </div>
+            ';
+                }
             }
         }
     }
@@ -247,7 +339,7 @@ function PersonalSadr()
     echo $html;
 }
 
-function PersonalBaghai()
+function PersonalBaghai($show)
 {
     $response = ReqAPI('http://localhost/Language-School-Site/Api/index.php', array(
         "Mode" => "QUERY",
@@ -263,15 +355,29 @@ function PersonalBaghai()
 
         if (strtolower($db['mode']) == 'personal') {
             if (strtolower($db['institutions']) == 'baghai') {
-                $html .= '
-                <div class="teachers-list-box">
+                if ($show == 'filter') {
+                    if (strtolower($db['show']) == "true") {
+                        $html .= '
+                    <div class="teachers-list-box">
                 <img src="' . $img_name . '" alt="' . $db['name'] . '">
                 <div class="teachers-list-box-title">
                     <h4>' . $db['name'] . '</h4>
                     <p>' . $db['des'] . '</p>
                 </div>
             </div>
-                ';
+            ';
+                    }
+                } else {
+                    $html .= '
+                    <div class="teachers-list-box">
+                <img src="' . $img_name . '" alt="' . $db['name'] . '">
+                <div class="teachers-list-box-title">
+                    <h4>' . $db['name'] . '</h4>
+                    <p>' . $db['des'] . '</p>
+                </div>
+            </div>
+            ';
+                }
             }
         }
     }
@@ -279,7 +385,7 @@ function PersonalBaghai()
     echo $html;
 }
 
-function News()
+function News($show)
 {
 
     $response = ReqAPI('http://localhost/Language-School-Site/Api/index.php', array(
@@ -294,7 +400,9 @@ function News()
         $img_split = explode('..', $db['img']);
         $img_name = '../Admin/Assets' . $img_split[1];
 
-        $html .= '
+        if ($show == 'filter') {
+            if (strtolower($db['show']) == "true") {
+                $html .= '
         <div class="news-list-box">
         <div class="news-list-box-title">
             <h4>' . $db['title'] . '</h4>
@@ -303,6 +411,18 @@ function News()
         <img src="' . $img_name . '" alt="Banner">
     </div>
         ';
+            }
+        } else {
+            $html .= '
+            <div class="news-list-box">
+            <div class="news-list-box-title">
+                <h4>' . $db['title'] . '</h4>
+                <p>' . $db['des'] . '</p>
+            </div>
+            <img src="' . $img_name . '" alt="Banner">
+        </div>
+            ';
+        }
     }
 
     echo $html;
