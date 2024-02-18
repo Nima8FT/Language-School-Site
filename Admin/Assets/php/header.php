@@ -37,14 +37,13 @@ if (isset($_POST['action'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="Assets/css/Normalize.css">
-    <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="stylesheet" href="Assets/css/Normal.css">
+    <link rel="stylesheet" href="Assets/css/styles.css">
     <link rel="stylesheet" href="Assets/css/font.icon.css">
     <title>Sadr Danesh</title>
     <script src="Assets/js/jquery-3.6.0.min.js"></script>
 
-    <script src="Assets/js/mains.js"></script>
-    <script src="Assets/js/page.js"></script>
+    <script src="Assets/js/main.js"></script>
     <script src="Assets/js/custom.js"></script>
 </head>
 

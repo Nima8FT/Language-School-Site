@@ -56,7 +56,7 @@ $(document).ready(function () {
               }
               $(isSelectBox).html(txt);
             }
-          } catch (error) {}
+          } catch (error) { }
       }
     }
   });
@@ -119,6 +119,8 @@ $(document).ready(function () {
   let href = url.split("/");
   href = href[href.length - 1];
   CheckActiveMenu(href);
+
+  $('#data tbody tr').css('display', 'flex');
 });
 
 $("#plas").click(function (e) {
@@ -140,7 +142,7 @@ $(".box_tabel_row").click(function (e) {
     try {
       let XX = name[i].innerHTML;
       $("#input_" + name[i].id).val(XX);
-    } catch (error) {}
+    } catch (error) { }
   }
 
   unSelect();
@@ -276,10 +278,14 @@ function CheckActiveMenu(URL) {
       for (let j = 0; j < ch1.length; j++)
         if (URL == $(ch1[j].children[0]).attr("href").toLowerCase())
           $(ch1[j]).addClass("linkActive");
-    } catch (error) {}
+    } catch (error) { }
   }
   //   let ch = $('.linkActive')
 }
+
+
+
+
 // $(".Insert").click(function (e) {
 //     var parent = $('.box_input').children();
 //     var Table = $('h1').html();

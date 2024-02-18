@@ -258,6 +258,8 @@ tbody {
     display: flex;
     flex-wrap: wrap;
     height: fit-content;
+    overflow-y: scroll;
+    max-height: 80vh;
 }
 
 .main_detail {

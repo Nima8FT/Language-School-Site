@@ -84,7 +84,7 @@ function BoxSadr($show)
 
         if (strtolower($db['mode']) == 'sadr') {
             if ($show == 'filter') {
-                if (strtolower($db['show']) == 'true') {
+                if (strtolower($db['isshow']) == 'true') {
                     $html .= '
             <div class="box">
                 <img class="box-img" src="' . $img_name . '" alt="Book">
@@ -151,7 +151,7 @@ function BoxBaghai($show)
 
         if (strtolower($db['mode']) == 'baghai') {
             if ($show == 'filter') {
-                if (strtolower($db['show']) == 'true') {
+                if (strtolower($db['isshow']) == 'true') {
                     $html .= '
             <div class="box">
                 <img class="box-img" src="' . $img_name . '" alt="Book">
@@ -218,7 +218,7 @@ function TeacherSadr($show)
         if (strtolower($db['mode']) == 'teacher') {
             if (strtolower($db['institutions']) == 'sadr') {
                 if ($show == 'filter') {
-                    if (strtolower($db['show']) == "true") {
+                    if (strtolower($db['isshow']) == "true") {
                         $html .= '
                     <div class="teachers-list-box">
                 <img src="' . $img_name . '" alt="' . $db['name'] . '">
@@ -264,7 +264,7 @@ function TeacherBaghai($show)
         if (strtolower($db['mode']) == 'teacher') {
             if (strtolower($db['institutions']) == 'baghai') {
                 if ($show == 'filter') {
-                    if (strtolower($db['show']) == "true") {
+                    if (strtolower($db['isshow']) == "true") {
                         $html .= '
                     <div class="teachers-list-box">
                 <img src="' . $img_name . '" alt="' . $db['name'] . '">
@@ -310,7 +310,7 @@ function PersonalSadr($show)
         if (strtolower($db['mode']) == 'personal') {
             if (strtolower($db['institutions']) == 'sadr') {
                 if ($show == 'filter') {
-                    if (strtolower($db['show']) == "true") {
+                    if (strtolower($db['isshow']) == "true") {
                         $html .= '
                     <div class="teachers-list-box">
                 <img src="' . $img_name . '" alt="' . $db['name'] . '">
@@ -356,7 +356,7 @@ function PersonalBaghai($show)
         if (strtolower($db['mode']) == 'personal') {
             if (strtolower($db['institutions']) == 'baghai') {
                 if ($show == 'filter') {
-                    if (strtolower($db['show']) == "true") {
+                    if (strtolower($db['isshow']) == "true") {
                         $html .= '
                     <div class="teachers-list-box">
                 <img src="' . $img_name . '" alt="' . $db['name'] . '">
@@ -401,7 +401,7 @@ function News($show)
         $img_name = '../Admin/Assets' . $img_split[1];
 
         if ($show == 'filter') {
-            if (strtolower($db['show']) == "true") {
+            if (strtolower($db['isshow']) == "true") {
                 $html .= '
         <div class="news-list-box">
         <div class="news-list-box-title">

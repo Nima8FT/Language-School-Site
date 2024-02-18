@@ -143,6 +143,7 @@
   border-radius: 10px;
   padding: 15px;
   transition: all ease-in-out 0.2s;
+  color: $color-hover-menu;
 
   &:hover {
     background: $bg-show;
@@ -150,5 +151,6 @@
 
   a {
     margin-left: 20px;
+    color: $color-hover-menu;
   }
 }

@@ -68,7 +68,7 @@ require_once('./Assets/php/header.php');
     </section>
 
     <section class="show">
-        <a href="box-sadr.php">نمایش دوره های بیشتر</a>
+        <a href="box-sadr.php">نمایش بیشتر</a>
         <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 
@@ -89,7 +89,7 @@ require_once('./Assets/php/header.php');
     </section>
 
     <section class="show">
-        <a href="box-baghai.php">نمایش دوره های بیشتر</a>
+        <a href="box-baghai.php">نمایش بیشتر</a>
         <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 
@@ -110,7 +110,7 @@ require_once('./Assets/php/header.php');
     </section>
 
     <section class="show">
-        <a href="teacher-sadr.php">نمایش دوره های بیشتر</a>
+        <a href="box-baghai.php">نمایش بیشتر</a>
         <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 
@@ -131,7 +131,7 @@ require_once('./Assets/php/header.php');
     </section>
 
     <section class="show">
-        <a href="teacher-baghai.php">نمایش دوره های بیشتر</a>
+        <a href="box-baghai.php">نمایش بیشتر</a>
         <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 
@@ -152,7 +152,7 @@ require_once('./Assets/php/header.php');
     </section>
 
     <section class="show">
-        <a href="news.php">نمایش دوره های بیشتر</a>
+        <a href="box-baghai.php">نمایش بیشتر</a>
         <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 
@@ -188,7 +188,7 @@ require_once('./Assets/php/header.php');
     </section>
 
     <section class="show">
-        <a href="personal-sadr.php">نمایش دوره های بیشتر</a>
+        <a href="box-baghai.php">نمایش بیشتر</a>
         <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 
@@ -209,7 +209,7 @@ require_once('./Assets/php/header.php');
     </section>
 
     <section class="show">
-        <a href="personal-baghai.php">نمایش دوره های بیشتر</a>
+        <a href="box-baghai.php">نمایش بیشتر</a>
         <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 

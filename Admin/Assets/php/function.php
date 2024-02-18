@@ -208,7 +208,8 @@ function Login($username, $password)
     }
 }
 
-function Logout() {
+function Logout()
+{
     unset($_SESSION['Login']);
     session_destroy();
     ReDirect('login.php');
@@ -269,6 +270,11 @@ function Insert($Table, $POST)
         }
         $i++;
     }
+
+    // var_dump($Fields);
+    // var_dump($Values);
+    // var_dump($Table);
+    // exit();
 
     $response = ReqAPI('http://localhost/Language-School-Site/Api/index.php', array(
         "Mode" => "INSERT",
