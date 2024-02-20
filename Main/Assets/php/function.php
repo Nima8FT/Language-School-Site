@@ -70,6 +70,8 @@ function Slider()
 function BoxSadr($show)
 {
 
+    $count = 0;
+
     $response = ReqAPI('http://localhost/Language-School-Site/Api/index.php', array(
         "Mode" => "QUERY",
         "Query" => "SELECT * FROM `box`"
@@ -85,8 +87,10 @@ function BoxSadr($show)
         if (strtolower($db['mode']) == 'sadr') {
             if ($show == 'filter') {
                 if (strtolower($db['isshow']) == 'true') {
-                    $html .= '
-            <div class="box">
+                    $count++;
+                    if ($count == 1) {
+                        $html .= '
+            <div class="box first-box">
                 <img class="box-img" src="' . $img_name . '" alt="Book">
                 <img class="box-title-img" src="./Assets/images/title-box.png" alt="Title Box">
                 <div class="box-title">
@@ -105,6 +109,28 @@ function BoxSadr($show)
                 </div>
                 </div>
             ';
+                    } else {
+                        $html .= '
+                        <div class="box">
+                            <img class="box-img" src="' . $img_name . '" alt="Book">
+                            <img class="box-title-img" src="./Assets/images/title-box.png" alt="Title Box">
+                            <div class="box-title">
+                                <div class="box-title-top">
+                                    <p>از ' . $db['date'] . '</p>
+                                    <p>تعداد جلسه: ' . $db['number'] . '</p>
+                                </div>
+                                <div class="box-title-main">
+                                    <h2>' . $db['title'] . '</h2>
+                                    <h4>مدرس: ' . $db['teacher'] . '</h4>
+                                </div>
+                                <div class="box-title-bottom">
+                                    <p>ادامه مطلب</p>
+                                    <img src="./Assets/images/edame.png" alt="arrow">
+                                </div>
+                            </div>
+                            </div>
+                        ';
+                    }
                 }
             } else {
                 $html .= '
@@ -142,6 +168,7 @@ function BoxBaghai($show)
         "Query" => "SELECT * FROM `box`"
     ));
 
+    $count = 0;
     $html = '';
 
     for ($i = 0; $i < count($response); $i++) {
@@ -152,8 +179,10 @@ function BoxBaghai($show)
         if (strtolower($db['mode']) == 'baghai') {
             if ($show == 'filter') {
                 if (strtolower($db['isshow']) == 'true') {
-                    $html .= '
-            <div class="box">
+                    $count++;
+                    if ($count == 1) {
+                        $html .= '
+            <div class="box first-box">
                 <img class="box-img" src="' . $img_name . '" alt="Book">
                 <img class="box-title-img" src="./Assets/images/title-box.png" alt="Title Box">
                 <div class="box-title">
@@ -172,6 +201,28 @@ function BoxBaghai($show)
                 </div>
                 </div>
             ';
+                    } else {
+                        $html .= '
+                        <div class="box">
+                            <img class="box-img" src="' . $img_name . '" alt="Book">
+                            <img class="box-title-img" src="./Assets/images/title-box.png" alt="Title Box">
+                            <div class="box-title">
+                                <div class="box-title-top">
+                                    <p>از ' . $db['date'] . '</p>
+                                    <p>تعداد جلسه: ' . $db['number'] . '</p>
+                                </div>
+                                <div class="box-title-main">
+                                    <h2>' . $db['title'] . '</h2>
+                                    <h4>مدرس: ' . $db['teacher'] . '</h4>
+                                </div>
+                                <div class="box-title-bottom">
+                                    <p>ادامه مطلب</p>
+                                    <img src="./Assets/images/edame.png" alt="arrow">
+                                </div>
+                            </div>
+                            </div>
+                        ';
+                    }
                 }
             } else {
                 $html .= '
@@ -209,6 +260,7 @@ function TeacherSadr($show)
     ));
 
     $html = "";
+    $count = 0;
 
     for ($i = 0; $i < count($response); $i++) {
         $db = $response[$i];
@@ -219,15 +271,28 @@ function TeacherSadr($show)
             if (strtolower($db['institutions']) == 'sadr') {
                 if ($show == 'filter') {
                     if (strtolower($db['isshow']) == "true") {
-                        $html .= '
-                    <div class="teachers-list-box">
-                <img src="' . $img_name . '" alt="' . $db['name'] . '">
-                <div class="teachers-list-box-title">
+                        $count++;
+                        if ($count == 1) {
+                            $html .= '
+                            <div class="teachers-list-box first-box">
+                            <img src="' . $img_name . '" alt="' . $db['name'] . '">
+                            <div class="teachers-list-box-title">
                     <h4>' . $db['name'] . '</h4>
                     <p>' . $db['des'] . '</p>
                 </div>
             </div>
             ';
+                        } else {
+                            $html .= '
+                            <div class="teachers-list-box">
+                            <img src="' . $img_name . '" alt="' . $db['name'] . '">
+                            <div class="teachers-list-box-title">
+                    <h4>' . $db['name'] . '</h4>
+                    <p>' . $db['des'] . '</p>
+                </div>
+            </div>
+            ';
+                        }
                     }
                 } else {
                     $html .= '
@@ -254,6 +319,7 @@ function TeacherBaghai($show)
         "Query" => "SELECT * FROM `personal`"
     ));
 
+    $count = 0;
     $html = "";
 
     for ($i = 0; $i < count($response); $i++) {
@@ -265,15 +331,28 @@ function TeacherBaghai($show)
             if (strtolower($db['institutions']) == 'baghai') {
                 if ($show == 'filter') {
                     if (strtolower($db['isshow']) == "true") {
-                        $html .= '
-                    <div class="teachers-list-box">
-                <img src="' . $img_name . '" alt="' . $db['name'] . '">
-                <div class="teachers-list-box-title">
+                        $count++;
+                        if ($count == 1) {
+                            $html .= '
+                            <div class="teachers-list-box first-box">
+                            <img src="' . $img_name . '" alt="' . $db['name'] . '">
+                            <div class="teachers-list-box-title">
                     <h4>' . $db['name'] . '</h4>
                     <p>' . $db['des'] . '</p>
                 </div>
             </div>
             ';
+                        } else {
+                            $html .= '
+                            <div class="teachers-list-box">
+                            <img src="' . $img_name . '" alt="' . $db['name'] . '">
+                            <div class="teachers-list-box-title">
+                    <h4>' . $db['name'] . '</h4>
+                    <p>' . $db['des'] . '</p>
+                </div>
+            </div>
+            ';
+                        }
                     }
                 } else {
                     $html .= '
@@ -301,6 +380,7 @@ function PersonalSadr($show)
     ));
 
     $html = "";
+    $count = 0;
 
     for ($i = 0; $i < count($response); $i++) {
         $db = $response[$i];
@@ -311,15 +391,28 @@ function PersonalSadr($show)
             if (strtolower($db['institutions']) == 'sadr') {
                 if ($show == 'filter') {
                     if (strtolower($db['isshow']) == "true") {
-                        $html .= '
-                    <div class="teachers-list-box">
-                <img src="' . $img_name . '" alt="' . $db['name'] . '">
-                <div class="teachers-list-box-title">
+                        $count++;
+                        if ($count == 1) {
+                            $html .= '
+                            <div class="teachers-list-box first-box">
+                            <img src="' . $img_name . '" alt="' . $db['name'] . '">
+                            <div class="teachers-list-box-title">
                     <h4>' . $db['name'] . '</h4>
                     <p>' . $db['des'] . '</p>
                 </div>
             </div>
             ';
+                        } else {
+                            $html .= '
+                            <div class="teachers-list-box">
+                            <img src="' . $img_name . '" alt="' . $db['name'] . '">
+                            <div class="teachers-list-box-title">
+                    <h4>' . $db['name'] . '</h4>
+                    <p>' . $db['des'] . '</p>
+                </div>
+            </div>
+            ';
+                        }
                     }
                 } else {
                     $html .= '
@@ -347,6 +440,7 @@ function PersonalBaghai($show)
     ));
 
     $html = "";
+    $count = 0;
 
     for ($i = 0; $i < count($response); $i++) {
         $db = $response[$i];
@@ -357,15 +451,28 @@ function PersonalBaghai($show)
             if (strtolower($db['institutions']) == 'baghai') {
                 if ($show == 'filter') {
                     if (strtolower($db['isshow']) == "true") {
-                        $html .= '
-                    <div class="teachers-list-box">
-                <img src="' . $img_name . '" alt="' . $db['name'] . '">
-                <div class="teachers-list-box-title">
+                        $count++;
+                        if ($count == 1) {
+                            $html .= '
+                            <div class="teachers-list-box first-box">
+                            <img src="' . $img_name . '" alt="' . $db['name'] . '">
+                            <div class="teachers-list-box-title">
                     <h4>' . $db['name'] . '</h4>
                     <p>' . $db['des'] . '</p>
                 </div>
             </div>
             ';
+                        } else {
+                            $html .= '
+                            <div class="teachers-list-box">
+                            <img src="' . $img_name . '" alt="' . $db['name'] . '">
+                            <div class="teachers-list-box-title">
+                    <h4>' . $db['name'] . '</h4>
+                    <p>' . $db['des'] . '</p>
+                </div>
+            </div>
+            ';
+                        }
                     }
                 } else {
                     $html .= '
@@ -473,20 +580,33 @@ function Commetns()
         "Query" => "SELECT * FROM `comments`"
     ));
 
+    $count = 0;
     $html = "";
 
     for ($i = 0; $i < count($response); $i++) {
         $db = $response[$i];
         $img_split = explode('..', $db['img']);
         $img_name = '../Admin/Assets' . $img_split[1];
+        $count++;
 
-        $html .= '
-        <div class="comments-bottom-box">
+        if($count == 1) {
+            $html .= '
+            <div class="comments-bottom-box first-box">
             <img src="' . $img_name . '" alt="Comments">
             <h3>' . $db['title'] . '</h3>
             <p>' . $db['des'] . '</p>
-        </div>
-        ';
+            </div>
+            ';
+        }
+        else {
+            $html .= '
+            <div class="comments-bottom-box">
+            <img src="' . $img_name . '" alt="Comments">
+            <h3>' . $db['title'] . '</h3>
+            <p>' . $db['des'] . '</p>
+            </div>
+            ';
+        }
     }
 
     echo $html;

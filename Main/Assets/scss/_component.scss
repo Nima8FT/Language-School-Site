@@ -238,3 +238,25 @@
 
   }
 }
+
+.header-right-menu-title {
+  position: relative;
+}
+
+.header-right-menu-title-sub {
+  @include width-height(120px,90px);
+  @include flex;
+  display: none;
+  background: $bg-head;
+  position: absolute;
+  bottom: -80px;
+  right: 15px;
+  flex-wrap: wrap;
+  border-radius: 10px;
+
+  a {
+    width: auto !important;
+    height: 0;
+    padding: 10px;
+  }
+}

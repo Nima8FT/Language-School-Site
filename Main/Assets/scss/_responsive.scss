@@ -1,0 +1,420 @@
+@media (min-width: 700px) and (max-width:1280px) {
+
+    .header {
+        padding: 0 2%;
+
+        &-logo {
+
+            &-img {
+                width: 30px;
+            }
+
+            &-title {
+                width: 200px;
+            }
+        }
+
+        &-right-menu {
+            width: 60%;
+            font-size: 16px;
+
+            a {
+                width: 75px;
+            }
+        }
+
+        &-left {
+            a {
+                font-size: 14px;
+            }
+
+            img {
+                width: 25px;
+            }
+        }
+    }
+
+    .head-title {
+
+        h2 {
+            width: 50%;
+        }
+
+        img {
+            width: 25%;
+        }
+    }
+
+    .show {
+        width: 35%;
+    }
+
+    .box {
+        &-img {
+            width: 300px;
+        }
+
+        &-title {
+            &-top {
+                p {
+                    font-size: 14px;
+                }
+            }
+
+            &-img {
+                bottom: -38px !important;
+            }
+
+            &-main {
+                height: 60% !important;
+
+                h2 {
+                    font-size: 18px;
+                }
+
+                h4 {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .teachers-list-box {
+        width: 250px;
+        height: 170px;
+
+        img {
+            width: 80px;
+        }
+
+        &-title {
+            h4 {
+                font-size: 18px;
+                margin-top: 15px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .news-list-box {
+        img {
+            width: 230px;
+            height: 150px;
+        }
+
+        &-title {
+            width: 50%;
+            height: 150px;
+
+            h4 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .about-title {
+        h3 {
+            font-size: 18px !important;
+        }
+
+        p {
+            font-size: 14px !important;
+        }
+    }
+
+    .footer {
+        &-top {
+            flex-wrap: wrap;
+
+            &-right {
+                width: 100%;
+
+                &-img {
+                    .logo-title-footer {
+                        width: 250px;
+                    }
+                }
+
+                &-title {
+
+                    h4 {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    &-right {
+                        justify-content: start;
+
+                        &-top {
+                            width: 70%;
+                        }
+
+                        &-bottom {
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-bottom {
+            font-size: 14px;
+        }
+    }
+
+    .comments-bottom-box {
+        width: 50%;
+
+        img {
+            width: 130px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width:700px) {
+
+    .header {
+
+        &-right {
+            width: 80%;
+
+            img {
+                margin-left: 5px;
+            }
+
+            &-menu {
+                display: none;
+            }
+        }
+
+        &-left {
+            display: none;
+        }
+
+        &-hambergurmenu {
+            display: flex;
+        }
+    }
+
+    .facilities {
+        @include width-height(95%, 240px);
+        flex-wrap: wrap;
+
+        &-item {
+            margin: 15px;
+            width: 40%;
+        }
+    }
+
+    .head-title {
+        h2 {
+            width: 100%;
+        }
+
+        img {
+            width: 12%;
+        }
+    }
+
+    .show {
+        @include width-height(50%, 100%);
+    }
+
+    .news-list-box {
+        height: 170px;
+
+        img {
+            width: 100px;
+            height: 140px;
+        }
+
+        &-title {
+            height: 160px;
+
+            h4 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .about-title {
+        div {
+            h3 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .comments-bottom {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+
+        &-box {
+            width: 100%;
+
+            img {
+                width: 100px;
+            }
+
+            h3 {
+                font-size: 14px;
+            }
+
+            p {
+                font-size: 13px;
+                -webkit-line-clamp: 5;
+            }
+        }
+    }
+
+    .box {
+        img {
+            width: 250px;
+        }
+
+        &-title {
+            height: 44%;
+
+            &-img {
+                bottom: -60px;
+            }
+
+            &-top {
+                height: 40% !important;
+                font-size: 14px;
+            }
+
+            &-main {
+                h2 {
+                    font-size: 16px;
+                }
+
+                h4 {
+                    font-size: 14px;
+                }
+            }
+
+            &-bottom {
+                display: none !important;
+            }
+        }
+
+    }
+
+    .teachers-list {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+
+        &-box {
+            @include width-height(250px, 150px);
+
+            img {
+                width: 70px;
+            }
+
+            &-title {
+                width: 200px;
+
+                h4 {
+                    font-size: 18px;
+                    margin-top: 10px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        &-top {
+            flex-wrap: wrap;
+
+            &-right {
+                width: 100%;
+
+                &-img {
+                    .logo-title-footer {
+                        width: 250px;
+                    }
+                }
+
+                &-title {
+
+                    h4 {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    &-right {
+                        justify-content: start;
+
+                        &-top {
+                            width: 70%;
+                        }
+
+                        &-bottom {
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-bottom {
+            font-size: 14px;
+        }
+    }
+
+    .boxes-list {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+
+        .box {
+            overflow-x: unset !important;
+            overflow-y: unset !important;
+        }
+    }
+
+    .first-box {
+        margin-right: 1350px !important;
+    }
+
+    .header-logo-img {
+        width: 50px;
+    }
+
+    .header-logo-title {
+        width: 250px;
+    }
+}

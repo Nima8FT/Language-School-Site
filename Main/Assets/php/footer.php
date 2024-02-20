@@ -7,7 +7,7 @@
 
             <div class="footer-top-right-img">
                 <img src="./Assets/images/logo.png" alt="Logo">
-                <img src="./Assets/images/title-white.png" alt="Title">
+                <img class="logo-title-footer" src="./Assets/images/title-white.png" alt="Title">
             </div>
 
             <div class="footer-top-right-title">
