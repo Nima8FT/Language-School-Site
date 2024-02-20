@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 18, 2024 at 09:45 PM
+-- Generation Time: Feb 20, 2024 at 05:42 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -54,8 +54,6 @@ CREATE TABLE `box` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `teacher` varchar(255) NOT NULL,
-  `category` varchar(255) NOT NULL,
-  `language` varchar(255) NOT NULL,
   `date` varchar(255) NOT NULL,
   `number` int(11) NOT NULL,
   `isshow` varchar(255) NOT NULL,
@@ -67,25 +65,25 @@ CREATE TABLE `box` (
 -- Dumping data for table `box`
 --
 
-INSERT INTO `box` (`id`, `title`, `teacher`, `category`, `language`, `date`, `number`, `isshow`, `mode`, `img`) VALUES
-(1, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', 'A', 'English', '1402/12/20', 8, 'true', 'sadr', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287262box64.png'),
-(2, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', 'A', 'English', '1402/12/20', 8, 'true', 'sadr', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287325box13.png'),
-(3, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', 'A', 'English', '1402/12/20', 8, 'true', 'sadr', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287349box70.png'),
-(4, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', 'A', 'English', '1402/12/20', 8, 'true', 'sadr', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287378box23.png'),
-(5, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', 'A', 'English', '1402/12/20', 8, 'true', 'sadr', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287398box31.png'),
-(6, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', 'A', 'English', '1402/12/20', 8, 'true', 'sadr', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287423box26.png'),
-(7, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', 'A', 'English', '1402/12/20', 8, 'false', 'sadr', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287450box55.png'),
-(8, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', 'A', 'English', '1402/12/20', 8, 'false', 'sadr', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287489box15.png'),
-(9, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', 'A', 'English', '1402/12/20', 8, 'false', 'sadr', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287510box22.png'),
-(10, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', 'A', 'English', '1402/12/20', 8, 'true', 'baghai', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287537box17.png'),
-(11, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', 'A', 'English', '1402/12/20', 8, 'true', 'baghai', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287566box16.png'),
-(12, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', 'A', 'English', '1402/12/20', 8, 'true', 'baghai', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287594box96.png'),
-(13, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', 'A', 'English', '1403/12/20', 8, 'true', 'baghai', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287621box20.png'),
-(14, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', 'A', 'English', '1402/12/20', 8, 'true', 'baghai', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708288077box35.png'),
-(15, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', 'A', 'English', '1403/12/20', 8, 'true', 'baghai', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708288114box41.png'),
-(16, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', 'A', 'English', '1402/12/20', 8, 'false', 'baghai', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708288149box24.png'),
-(17, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', 'A', 'English', '1402/12/20', 8, 'false', 'baghai', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708288170box88.png'),
-(18, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', 'A', 'English', '1402/12/20', 8, 'false', 'baghai', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708288194box29.png');
+INSERT INTO `box` (`id`, `title`, `teacher`, `date`, `number`, `isshow`, `mode`, `img`) VALUES
+(1, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', '1402/12/20', 8, 'true', 'sadr', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287262box64.png'),
+(2, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', '1402/12/20', 8, 'true', 'sadr', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287325box13.png'),
+(3, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', '1402/12/20', 8, 'true', 'sadr', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287349box70.png'),
+(4, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', '1402/12/20', 8, 'true', 'sadr', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287378box23.png'),
+(5, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', '1402/12/20', 8, 'true', 'sadr', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287398box31.png'),
+(6, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', '1402/12/20', 8, 'true', 'sadr', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287423box26.png'),
+(7, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', '1402/12/20', 8, 'false', 'sadr', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287450box55.png'),
+(8, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', '1402/12/20', 8, 'false', 'sadr', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287489box15.png'),
+(9, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', '1402/12/20', 8, 'false', 'sadr', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287510box22.png'),
+(10, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', '1402/12/20', 8, 'true', 'baghai', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287537box17.png'),
+(11, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', '1402/12/20', 8, 'true', 'baghai', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287566box16.png'),
+(12, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', '1402/12/20', 8, 'true', 'baghai', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287594box96.png'),
+(13, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', '1403/12/20', 8, 'true', 'baghai', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708287621box20.png'),
+(14, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', '1402/12/20', 8, 'true', 'baghai', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708288077box35.png'),
+(15, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', '1403/12/20', 8, 'true', 'baghai', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708288114box41.png'),
+(16, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', '1402/12/20', 8, 'false', 'baghai', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708288149box24.png'),
+(17, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', '1402/12/20', 8, 'false', 'baghai', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708288170box88.png'),
+(18, 'دوره اموزش کتاب summit 1', 'علی ملکوتی خواه', '1402/12/20', 8, 'false', 'baghai', '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/box/1708288194box29.png');
 
 -- --------------------------------------------------------
 
@@ -173,6 +171,37 @@ INSERT INTO `personal` (`id`, `name`, `des`, `institutions`, `mode`, `isshow`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `roadmap`
+--
+
+CREATE TABLE `roadmap` (
+  `id` int(11) NOT NULL,
+  `level` int(11) NOT NULL,
+  `language` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `des` varchar(255) NOT NULL,
+  `number` int(11) NOT NULL,
+  `time` int(11) NOT NULL,
+  `img` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `roadmap`
+--
+
+INSERT INTO `roadmap` (`id`, `level`, `language`, `title`, `des`, `number`, `time`, `img`) VALUES
+(4, 1, 'English', 'nima', ' هر کتاب در چهار ترم تدریس میشود', 8, 1, '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/roadmap/1708379238roadmap72.png'),
+(5, 2, 'English', 'basic', ' هر کتاب در چهار ترم تدریس میشود', 8, 1, '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/roadmap/1708379261roadmap88.png'),
+(6, 3, 'English', 'advanced', ' هر کتاب در چهار ترم تدریس میشود', 8, 1, '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/roadmap/1708379742roadmap80.png'),
+(7, 1, 'Germany', 'basic', ' هر کتاب در چهار ترم تدریس میشود', 8, 1, '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/roadmap/1708380410roadmap54.png'),
+(8, 2, 'Germany', 'medium', ' هر کتاب در چهار ترم تدریس میشود', 8, 1, '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/roadmap/1708380430roadmap19.png'),
+(9, 3, 'Germany', 'advanced', ' هر کتاب در چهار ترم تدریس میشود', 8, 1, '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/roadmap/1708380453roadmap90.png'),
+(10, 1, 'french', 'basic', ' هر کتاب در چهار ترم تدریس میشود', 8, 1, '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/roadmap/1708380610roadmap47.png'),
+(11, 2, 'french', 'advance', ' هر کتاب در چهار ترم تدریس میشود', 8, 1, '/opt/lampp/htdocs/Language-School-Site/Admin/Assets/php/../img/roadmap/1708380642roadmap90.png');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `slider`
 --
 
@@ -246,6 +275,12 @@ ALTER TABLE `personal`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `roadmap`
+--
+ALTER TABLE `roadmap`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `slider`
 --
 ALTER TABLE `slider`
@@ -290,6 +325,12 @@ ALTER TABLE `news`
 --
 ALTER TABLE `personal`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `roadmap`
+--
+ALTER TABLE `roadmap`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `slider`
