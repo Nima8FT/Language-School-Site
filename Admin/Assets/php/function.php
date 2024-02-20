@@ -234,6 +234,9 @@ function UploadFiles($img_name, $Table)
             } else if ($Table == "comments") {
                 $img_dir = __DIR__ . '/../img/comments/' . $img_name . '.' . $format;
             }
+            else if($Table == "roadmap") {
+                $img_dir = __DIR__ . '/../img/roadmap/' . $img_name . '.' . $format;
+            }
 
             $img_tmp = $value['tmp_name'];
             move_uploaded_file($img_tmp, $img_dir);

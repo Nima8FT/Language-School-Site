@@ -435,7 +435,22 @@ function AboutUs()
         "Query" => "SELECT * FROM `about`"
     ));
 
+    $response1 = ReqAPI('http://localhost/Language-School-Site/Api/index.php', array(
+        "Mode" => "QUERY",
+        "Query" => "SELECT * FROM `slider`"
+    ));
+
+
     $html = "";
+
+    for ($i = 0; $i < count($response1); $i++) {
+        $db = $response1[$i];
+        $img_split = explode('..', $db['img']);
+        $img_name = '../Admin/Assets' . $img_split[1];
+        if ($db['mode'] == 'about') {
+            $html .= '<img src="' . $img_name . '" alt="Slider">';
+        }
+    }
 
     for ($i = 0; $i < count($response); $i++) {
         $db = $response[$i];
@@ -472,6 +487,231 @@ function Commetns()
             <p>' . $db['des'] . '</p>
         </div>
         ';
+    }
+
+    echo $html;
+}
+
+function RoadmapEn()
+{
+    $response = ReqAPI('http://localhost/Language-School-Site/Api/index.php', array(
+        "Mode" => "QUERY",
+        "Query" => "SELECT * FROM `roadmap` ORDER BY level ASC"
+    ));
+
+
+    $count = 0;
+    $html = "";
+
+    for ($i = 0; $i < count($response); $i++) {
+        $db = $response[$i];
+        $img_split = explode('..', $db['img']);
+        $img_name = '../Admin/Assets' . $img_split[1];
+
+        if (strtolower($db['language']) == 'english') {
+            $count++;
+            if ($count % 2 == 0) {
+                $html .= '
+                <div class="rtl-roadmap-body-box">
+                <img class="roadmap-body-box-img" src="' . $img_name . '" alt="">
+                <img class="roadmap-body-box-circle" src="./Assets/images/line-circle.png" alt="">
+    
+                <div class="roadmap-body-box-title">
+                    <h3>' . $db['title'] . '</h3>
+                    <img src="./Assets/images/line-title.png" alt="">
+                    <div class="roadmap-body-box-title-sub">
+                        <div class="circle"></div>
+                        <p>' . $db['title'] . '</p>
+                    </div>
+                    <div class="roadmap-body-box-title-sub">
+                        <div class="circle"></div>
+                        <p>تعداد جلسات :' . $db['number'] . '</p>
+                    </div>
+                    <div class="roadmap-body-box-title-sub">
+                        <div class="circle"></div>
+                        <p>به مدت' . $db['time'] . '  ساعت</p>
+                    </div>
+                </div>
+            </div>
+                ';
+            } else {
+
+
+                $html .= '
+                <div class="ltr-roadmap-body-box">
+                <img class="roadmap-body-box-img" src="' . $img_name . '" alt="">
+                <img class="roadmap-body-box-circle" src="./Assets/images/line-circle.png" alt="">
+    
+                <div class="roadmap-body-box-title">
+                    <h3>' . $db['title'] . '</h3>
+                    <img src="./Assets/images/line-title.png" alt="">
+                    <div class="roadmap-body-box-title-sub">
+                        <div class="circle"></div>
+                        <p>' . $db['title'] . '</p>
+                    </div>
+                    <div class="roadmap-body-box-title-sub">
+                        <div class="circle"></div>
+                        <p>تعداد جلسات :' . $db['number'] . '</p>
+                    </div>
+                    <div class="roadmap-body-box-title-sub">
+                        <div class="circle"></div>
+                        <p>به مدت' . $db['time'] . '  ساعت</p>
+                    </div>
+                </div>
+            </div>
+                ';
+            }
+        }
+    }
+
+    echo $html;
+}
+
+function RoadmapFn()
+{
+    $response = ReqAPI('http://localhost/Language-School-Site/Api/index.php', array(
+        "Mode" => "QUERY",
+        "Query" => "SELECT * FROM `roadmap` ORDER BY level ASC"
+    ));
+
+
+    $count = 0;
+    $html = "";
+
+    for ($i = 0; $i < count($response); $i++) {
+        $db = $response[$i];
+        $img_split = explode('..', $db['img']);
+        $img_name = '../Admin/Assets' . $img_split[1];
+
+        if (strtolower($db['language']) == 'french') {
+            $count++;
+            if ($count % 2 == 0) {
+                $html .= '
+                <div class="rtl-roadmap-body-box">
+                <img class="roadmap-body-box-img" src="' . $img_name . '" alt="">
+                <img class="roadmap-body-box-circle" src="./Assets/images/line-circle.png" alt="">
+    
+                <div class="roadmap-body-box-title">
+                    <h3>' . $db['title'] . '</h3>
+                    <img src="./Assets/images/line-title.png" alt="">
+                    <div class="roadmap-body-box-title-sub">
+                        <div class="circle"></div>
+                        <p>' . $db['title'] . '</p>
+                    </div>
+                    <div class="roadmap-body-box-title-sub">
+                        <div class="circle"></div>
+                        <p>تعداد جلسات :' . $db['number'] . '</p>
+                    </div>
+                    <div class="roadmap-body-box-title-sub">
+                        <div class="circle"></div>
+                        <p>به مدت' . $db['time'] . '  ساعت</p>
+                    </div>
+                </div>
+            </div>
+                ';
+            } else {
+
+
+                $html .= '
+                <div class="ltr-roadmap-body-box">
+                <img class="roadmap-body-box-img" src="' . $img_name . '" alt="">
+                <img class="roadmap-body-box-circle" src="./Assets/images/line-circle.png" alt="">
+    
+                <div class="roadmap-body-box-title">
+                    <h3>' . $db['title'] . '</h3>
+                    <img src="./Assets/images/line-title.png" alt="">
+                    <div class="roadmap-body-box-title-sub">
+                        <div class="circle"></div>
+                        <p>' . $db['title'] . '</p>
+                    </div>
+                    <div class="roadmap-body-box-title-sub">
+                        <div class="circle"></div>
+                        <p>تعداد جلسات :' . $db['number'] . '</p>
+                    </div>
+                    <div class="roadmap-body-box-title-sub">
+                        <div class="circle"></div>
+                        <p>به مدت' . $db['time'] . '  ساعت</p>
+                    </div>
+                </div>
+            </div>
+                ';
+            }
+        }
+    }
+
+    echo $html;
+}
+
+function RoadmapGr()
+{
+    $response = ReqAPI('http://localhost/Language-School-Site/Api/index.php', array(
+        "Mode" => "QUERY",
+        "Query" => "SELECT * FROM `roadmap` ORDER BY level ASC"
+    ));
+
+
+    $count = 0;
+    $html = "";
+
+    for ($i = 0; $i < count($response); $i++) {
+        $db = $response[$i];
+        $img_split = explode('..', $db['img']);
+        $img_name = '../Admin/Assets' . $img_split[1];
+
+        if (strtolower($db['language']) == 'germany') {
+            $count++;
+            if ($count % 2 == 0) {
+                $html .= '
+                <div class="rtl-roadmap-body-box">
+                <img class="roadmap-body-box-img" src="' . $img_name . '" alt="">
+                <img class="roadmap-body-box-circle" src="./Assets/images/line-circle.png" alt="">
+    
+                <div class="roadmap-body-box-title">
+                    <h3>' . $db['title'] . '</h3>
+                    <img src="./Assets/images/line-title.png" alt="">
+                    <div class="roadmap-body-box-title-sub">
+                        <div class="circle"></div>
+                        <p>' . $db['title'] . '</p>
+                    </div>
+                    <div class="roadmap-body-box-title-sub">
+                        <div class="circle"></div>
+                        <p>تعداد جلسات :' . $db['number'] . '</p>
+                    </div>
+                    <div class="roadmap-body-box-title-sub">
+                        <div class="circle"></div>
+                        <p>به مدت' . $db['time'] . '  ساعت</p>
+                    </div>
+                </div>
+            </div>
+                ';
+            } else {
+
+
+                $html .= '
+                <div class="ltr-roadmap-body-box">
+                <img class="roadmap-body-box-img" src="' . $img_name . '" alt="">
+                <img class="roadmap-body-box-circle" src="./Assets/images/line-circle.png" alt="">
+    
+                <div class="roadmap-body-box-title">
+                    <h3>' . $db['title'] . '</h3>
+                    <img src="./Assets/images/line-title.png" alt="">
+                    <div class="roadmap-body-box-title-sub">
+                        <div class="circle"></div>
+                        <p>' . $db['title'] . '</p>
+                    </div>
+                    <div class="roadmap-body-box-title-sub">
+                        <div class="circle"></div>
+                        <p>تعداد جلسات :' . $db['number'] . '</p>
+                    </div>
+                    <div class="roadmap-body-box-title-sub">
+                        <div class="circle"></div>
+                        <p>به مدت' . $db['time'] . '  ساعت</p>
+                    </div>
+                </div>
+            </div>
+                ';
+            }
+        }
     }
 
     echo $html;

@@ -110,7 +110,7 @@ require_once('./Assets/php/header.php');
     </section>
 
     <section class="show">
-        <a href="box-baghai.php">نمایش بیشتر</a>
+        <a href="teacher-sadr.php">نمایش بیشتر</a>
         <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 
@@ -131,7 +131,7 @@ require_once('./Assets/php/header.php');
     </section>
 
     <section class="show">
-        <a href="box-baghai.php">نمایش بیشتر</a>
+        <a href="teacher-baghai.php">نمایش بیشتر</a>
         <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 
@@ -152,7 +152,7 @@ require_once('./Assets/php/header.php');
     </section>
 
     <section class="show">
-        <a href="box-baghai.php">نمایش بیشتر</a>
+        <a href="news.php">نمایش بیشتر</a>
         <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 
@@ -167,7 +167,6 @@ require_once('./Assets/php/header.php');
     </section>
 
     <section class="about-title">
-        <img src="./Assets/images/Slider.png" alt="Slider">
         <?php AboutUs(); ?>
     </section>
 
@@ -188,7 +187,7 @@ require_once('./Assets/php/header.php');
     </section>
 
     <section class="show">
-        <a href="box-baghai.php">نمایش بیشتر</a>
+        <a href="personal-sadr.php">نمایش بیشتر</a>
         <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 
@@ -209,7 +208,7 @@ require_once('./Assets/php/header.php');
     </section>
 
     <section class="show">
-        <a href="box-baghai.php">نمایش بیشتر</a>
+        <a href="personal-baghai.php">نمایش بیشتر</a>
         <img src="./Assets/images/edame.png" alt="arrow">
     </section>
 

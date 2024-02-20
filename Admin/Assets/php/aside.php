@@ -24,6 +24,7 @@ if (isset($_POST['logOut'])) {
                 <li><a href="slider.php"><i></i><span>اسلایدر</span></a></li>
                 <li><a href="about.php"><i></i><span>درباره ما</span></a></li>
                 <li><a href="comments.php"><i></i><span>نظرات</span></a></li>
+                <li><a href="roadmap.php"><i></i><span>نقشه راه</span></a></li>
             </ul>
         </nav>
         <form action method="post" style="height: 35px;box-shadow:none;">

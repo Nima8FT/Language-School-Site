@@ -21,7 +21,7 @@ require_once('function.php');
             <img class="logo" src="../Design/Assets/images/logo.png" alt="Logo">
             <img class="name" src="../Design/Assets/images/title.png" alt="Name">
             <div class="header-right-menu">
-                <a href="#">دوره ها</a>
+                <a href="roadmap.php">دوره ها</a>
                 <a class="menu-teacher">اساتید</a>
                 <a class="menu-news">اخبار</a>
                 <a class="menu-aboutus">درباره ما</a>

@@ -1,6 +1,11 @@
 $(document).ready(function () {
   width = $(document).width();
 
+  $('.french-row').css('display', 'none');
+  $('.germany-row').css('display', 'none');
+  $('.english').css('opacity', '1');
+  $('.english div').css('background', '#00336A');
+
   $(".menu-teacher").click(function (e) {
     if (width > 1800) {
       $(document).scrollTop(3450);
@@ -56,12 +61,49 @@ $(document).ready(function () {
   });
 
   $(".logo").click(function (e) {
-    location.replace("index.html");
+    location.replace("index.php");
   });
 
   $(".name").click(function (e) {
-    location.replace("index.html");
+    location.replace("index.php");
   });
+
+  $('.french').click(function (e) { 
+    $('.english-row').css('display', 'none');
+    $('.germany-row').css('display', 'none');
+    $('.french-row').css('display', 'block');
+    $('.english').css('opacity', '0.7');
+    $('.english div').css('background', '#c4c4c4');
+    $('.germany').css('opacity', '0.7');
+    $('.germany div').css('background', '#c4c4c4');
+    $('.french').css('opacity', '1');
+    $('.french div').css('background', '#00336A');
+  });
+
+  $('.english').click(function (e) { 
+    $('.french-row').css('display', 'none');
+    $('.germany-row').css('display', 'none');
+    $('.english-row').css('display', 'block');
+    $('.french').css('opacity', '0.7');
+    $('.french div').css('background', '#c4c4c4');
+    $('.germany').css('opacity', '0.7');
+    $('.germany div').css('background', '#c4c4c4');
+    $('.english').css('opacity', '1');
+    $('.english div').css('background', '#00336A');
+  });
+
+  $('.germany').click(function (e) { 
+    $('.french-row').css('display', 'none');
+    $('.english-row').css('display', 'none');
+    $('.germany-row').css('display', 'block');
+    $('.french').css('opacity', '0.7');
+    $('.french div').css('background', '#c4c4c4');
+    $('.english').css('opacity', '0.7');
+    $('.english div').css('background', '#c4c4c4');
+    $('.germany').css('opacity', '1');
+    $('.germany div').css('background', '#00336A');
+  });
+
 });
 
 document.addEventListener("DOMContentLoaded", function () {
