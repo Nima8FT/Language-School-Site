@@ -11,7 +11,7 @@ require_once('function.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sadre Danesh</title>
-    <link rel="stylesheet" href="./Assets/css/mains.css">
+    <link rel="stylesheet" href="./Assets/css/main.css">
 </head>
 
 <body>
@@ -50,7 +50,7 @@ require_once('function.php');
         </section>
         <section class="header-right">
             <img class="header-logo-img" class="logo" src="../Design/Assets/images/logo.png" alt="Logo">
-            <img class="header-logo-title" class="name" src="../Design/Assets/images/title.png" alt="Name">
+            <h1 class="header-logo-title name">آموزشگاه زبان صدر دانش و بقایی</h1>
             <div class="header-right-menu">
                 <a href="index.php">خانه</a>
                 <a href="roadmap.php" style="margin-left: 10px;">دوره ها</a>
@@ -63,7 +63,6 @@ require_once('function.php');
                     </div>
                 </div>
                 <a href="news.php" class="menu-news">اخبار</a>
-                <a href="aboutus.php" class="menu-aboutus" style="margin-left: 10px;">درباره ما</a>
                 <div class="header-right-menu-title">
                     <a class="menu-teacher" id="personal">پرسنل</a>
 
@@ -72,6 +71,7 @@ require_once('function.php');
                         <a href="personal-baghai.php">بقایی</a>
                     </div>
                 </div>
+                <a href="aboutus.php" class="menu-aboutus">درباره ما</a>
                 <a href="comments.php" class="menu-comments">نظرات</a>
             </div>
         </section>

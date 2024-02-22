@@ -7,7 +7,7 @@
 
             <div class="footer-top-right-img">
                 <img src="./Assets/images/logo.png" alt="Logo">
-                <img class="logo-title-footer" src="./Assets/images/title-white.png" alt="Title">
+                <h1 class="logo-title-footer">آموزشگاه زبان صدر دانش و بقایی</h1>
             </div>
 
             <div class="footer-top-right-title">

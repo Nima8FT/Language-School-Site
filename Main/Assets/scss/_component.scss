@@ -40,6 +40,7 @@
       &-img {
         position: relative;
         z-index: -1;
+        width: 250px;
       }
 
       &-title-img {
@@ -47,6 +48,7 @@
         opacity: 0.9;
         left: 0;
         bottom: 0;
+        width: 260px;
       }
 
       &-title {
@@ -56,23 +58,21 @@
         padding: 20px;
 
         &-top {
-          @include width-height(100%, 30%);
+          @include width-height(100%, 40%);
           display: flex;
           justify-content: space-between;
+          font-size: 14px;
         }
 
         &-main {
           @include width-height(100%, 50%);
-        }
 
-        &-bottom {
-          @include width-height(100%, 20%);
-          @include flex;
-          justify-content: end;
+          h2 {
+            font-size: 16px;
+          }
 
-          p {
-            color: $color-hover-menu;
-            margin-left: 10px;
+          h4 {
+            font-size: 14px;
           }
         }
       }
@@ -93,14 +93,14 @@
     margin-top: 70px;
 
     &-box {
-      @include width-height(400px, 200px);
+      @include width-height(300px, 180px);
       @include flex;
       background: $bg-box;
       position: relative;
       border-radius: 15px;
       padding: 20px;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      margin: 50px;
+      margin: 50px 20px 30px 20px;
 
       img {
         width: 100px;
@@ -115,7 +115,7 @@
 
         h4 {
           text-align: center;
-          font-size: 22px;
+          font-size: 18px;
           color: $color-title;
           margin-top: 30px;
         }
@@ -128,6 +128,7 @@
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
           overflow: hidden;
+          font-size: 14px
         }
       }
     }
@@ -163,13 +164,13 @@
 }
 
 .rtl-roadmap-body-box {
-  @include width-height(100%,500px);
+  @include width-height(100%, 500px);
   @include flex;
   flex-wrap: wrap;
   position: relative;
 
   .roadmap-body-box-img {
-    @include width-height(350px,auto);
+    @include width-height(350px, auto);
     border-radius: 100%;
     position: absolute;
     right: 50px;
@@ -183,9 +184,9 @@
   .roadmap-body-box-title {
     position: absolute;
     right: 450px;
-    
+
     img {
-      @include width-height(200px,2px);
+      @include width-height(200px, 2px);
     }
 
     .roadmap-body-box-title-sub {
@@ -196,18 +197,17 @@
         margin-right: 10px;
       }
     }
-
   }
 }
 
 .ltr-roadmap-body-box {
-  @include width-height(100%,500px);
+  @include width-height(100%, 500px);
   @include flex;
   flex-wrap: wrap;
   position: relative;
 
   .roadmap-body-box-img {
-    @include width-height(350px,auto);
+    @include width-height(350px, auto);
     border-radius: 100%;
     position: absolute;
     left: 50px;
@@ -222,9 +222,9 @@
   .roadmap-body-box-title {
     position: absolute;
     left: 450px;
-    
+
     img {
-      @include width-height(200px,2px);
+      @include width-height(200px, 2px);
     }
 
     .roadmap-body-box-title-sub {
@@ -235,7 +235,6 @@
         margin-right: 10px;
       }
     }
-
   }
 }
 
@@ -244,13 +243,13 @@
 }
 
 .header-right-menu-title-sub {
-  @include width-height(120px,90px);
+  @include width-height(120px, 90px);
   @include flex;
   display: none;
   background: $bg-head;
   position: absolute;
-  bottom: -80px;
-  right: 15px;
+  bottom: -85px;
+  right: -20px;
   flex-wrap: wrap;
   border-radius: 10px;
 
@@ -259,4 +258,9 @@
     height: 0;
     padding: 10px;
   }
+}
+
+#teacher,
+#personal {
+  margin-left: 30px;
 }

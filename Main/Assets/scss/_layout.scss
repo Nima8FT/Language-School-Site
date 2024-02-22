@@ -2,7 +2,7 @@
   position: fixed !important;
   z-index: 99;
   @include flex;
-  @include width-height(100%, 70px);
+  @include width-height(100%, 55px);
   background: $bg-head;
   justify-content: space-between;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -17,6 +17,12 @@
     img {
       margin-left: 20px;
       cursor: pointer;
+      width: 30px;
+    }
+
+    h1 {
+      font-size: 20px;
+      color: $bg-bottom-footer;
     }
 
     &-menu {
@@ -30,6 +36,7 @@
         @extend %full-space;
         color: $color-menu;
         cursor: pointer;
+        font-size: 16px;
 
         &:hover {
           color: $color-hover-menu;
@@ -44,9 +51,14 @@
     justify-content: end;
     width: 20%;
 
+    img {
+      width: 25px;
+    }
+
     a {
       color: $color-menu;
       cursor: pointer;
+      font-size: 16px;
 
       &:hover {
         color: $color-hover-menu;
@@ -62,8 +74,7 @@ main {
 
 .slider-container {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  @include width-height(100%, 70vh);
   overflow: hidden;
 
   .slider {
@@ -125,7 +136,7 @@ main {
   margin-top: 50px;
   border-radius: 15px;
   background: $color-white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 5px;
   padding: 10px;
 
   &-item {
@@ -240,21 +251,26 @@ main {
     margin: 40px;
 
     &-box {
-      @include width-height(30%, 100%);
+      @include width-height(25%, 100%);
       @include flex;
       background: $color-white;
       border-radius: 10px;
-      margin: 40px;
+      margin: 30px;
       flex-wrap: wrap;
       padding: 20px;
       max-width: 350px;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+      img {
+        width: 120px;
+      }
 
       h3 {
         width: 100%;
         margin: 10px 0;
         text-align: right;
         color: $color-title;
+        font-size: 18px;
       }
 
       p {
@@ -263,6 +279,7 @@ main {
         -webkit-line-clamp: 8;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        font-size: 14px;
       }
     }
   }
@@ -283,6 +300,7 @@ main {
 
       &-img {
         @include width-height(100%, 30%);
+        @include flex;
         text-align: center;
         margin-bottom: 30px;
 
@@ -317,11 +335,11 @@ main {
 
           &-top,
           &-bottom {
-            @include width-height(51%, 50%);
+            @include width-height(80%, 50%);
           }
 
           &-bottom {
-            width: 51%;
+            width: 80%;
             @include flex;
             justify-content: start;
             flex-wrap: wrap;
@@ -467,7 +485,7 @@ main {
     padding: 20px;
 
     a {
-      @include width-height(100%,5px)
+      @include width-height(100%, 5px);
     }
   }
 

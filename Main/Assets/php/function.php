@@ -102,10 +102,6 @@ function BoxSadr($show)
                         <h2>' . $db['title'] . '</h2>
                         <h4>مدرس: ' . $db['teacher'] . '</h4>
                     </div>
-                    <div class="box-title-bottom">
-                        <p>ادامه مطلب</p>
-                        <img src="./Assets/images/edame.png" alt="arrow">
-                    </div>
                 </div>
                 </div>
             ';
@@ -122,10 +118,6 @@ function BoxSadr($show)
                                 <div class="box-title-main">
                                     <h2>' . $db['title'] . '</h2>
                                     <h4>مدرس: ' . $db['teacher'] . '</h4>
-                                </div>
-                                <div class="box-title-bottom">
-                                    <p>ادامه مطلب</p>
-                                    <img src="./Assets/images/edame.png" alt="arrow">
                                 </div>
                             </div>
                             </div>
@@ -145,10 +137,6 @@ function BoxSadr($show)
                         <div class="box-title-main">
                             <h2>' . $db['title'] . '</h2>
                             <h4>مدرس: ' . $db['teacher'] . '</h4>
-                        </div>
-                        <div class="box-title-bottom">
-                            <p>ادامه مطلب</p>
-                            <img src="./Assets/images/edame.png" alt="arrow">
                         </div>
                     </div>
                     </div>
@@ -194,10 +182,6 @@ function BoxBaghai($show)
                         <h2>' . $db['title'] . '</h2>
                         <h4>مدرس: ' . $db['teacher'] . '</h4>
                     </div>
-                    <div class="box-title-bottom">
-                        <p>ادامه مطلب</p>
-                        <img src="./Assets/images/edame.png" alt="arrow">
-                    </div>
                 </div>
                 </div>
             ';
@@ -214,10 +198,6 @@ function BoxBaghai($show)
                                 <div class="box-title-main">
                                     <h2>' . $db['title'] . '</h2>
                                     <h4>مدرس: ' . $db['teacher'] . '</h4>
-                                </div>
-                                <div class="box-title-bottom">
-                                    <p>ادامه مطلب</p>
-                                    <img src="./Assets/images/edame.png" alt="arrow">
                                 </div>
                             </div>
                             </div>
@@ -237,10 +217,6 @@ function BoxBaghai($show)
                         <div class="box-title-main">
                             <h2>' . $db['title'] . '</h2>
                             <h4>مدرس: ' . $db['teacher'] . '</h4>
-                        </div>
-                        <div class="box-title-bottom">
-                            <p>ادامه مطلب</p>
-                            <img src="./Assets/images/edame.png" alt="arrow">
                         </div>
                     </div>
                     </div>
