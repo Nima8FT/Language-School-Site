@@ -128,7 +128,7 @@
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
           overflow: hidden;
-          font-size: 14px
+          font-size: 14px;
         }
       }
     }
@@ -159,7 +159,7 @@
 .circle {
   @include width-height(8px, 8px);
   border-radius: 100px;
-  background: $color-des;
+  background: $bg-head;
   transition: all ease-in-out 0.2s;
 }
 
@@ -170,20 +170,22 @@
   position: relative;
 
   .roadmap-body-box-img {
-    @include width-height(350px, auto);
+    @include width-height(250px, auto);
     border-radius: 100%;
     position: absolute;
-    right: 50px;
+    right: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 
   .roadmap-body-box-circle {
+    width: 145px;
     position: absolute;
     right: 0;
   }
 
   .roadmap-body-box-title {
     position: absolute;
-    right: 450px;
+    right: 280px;
 
     img {
       @include width-height(200px, 2px);
@@ -193,27 +195,30 @@
       @include flex;
       justify-content: start;
 
-      p {
+      pre {
         margin-right: 10px;
+        font-size: 14px;
       }
     }
   }
 }
 
 .ltr-roadmap-body-box {
-  @include width-height(100%, 500px);
+  @include width-height(100%, auto);
   @include flex;
   flex-wrap: wrap;
   position: relative;
 
   .roadmap-body-box-img {
-    @include width-height(350px, auto);
+    @include width-height(250px, auto);
     border-radius: 100%;
     position: absolute;
-    left: 50px;
+    left: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 
   .roadmap-body-box-circle {
+    width: 145px;
     position: absolute;
     left: 0;
     transform: rotate(180deg);
@@ -221,18 +226,20 @@
 
   .roadmap-body-box-title {
     position: absolute;
-    left: 450px;
+    left: 280px;
 
     img {
       @include width-height(200px, 2px);
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 
     .roadmap-body-box-title-sub {
       @include flex;
       justify-content: start;
 
-      p {
+      pre {
         margin-right: 10px;
+        font-size: 14px;
       }
     }
   }
@@ -258,6 +265,12 @@
     height: 0;
     padding: 10px;
   }
+}
+
+.english-row,
+.germany-row,
+.french-row {
+  margin: 150px;
 }
 
 #teacher,

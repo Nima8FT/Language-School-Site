@@ -616,16 +616,7 @@ function RoadmapEn()
                     <h3>' . $db['title'] . '</h3>
                     <img src="./Assets/images/line-title.png" alt="">
                     <div class="roadmap-body-box-title-sub">
-                        <div class="circle"></div>
-                        <p>' . $db['title'] . '</p>
-                    </div>
-                    <div class="roadmap-body-box-title-sub">
-                        <div class="circle"></div>
-                        <p>تعداد جلسات :' . $db['number'] . '</p>
-                    </div>
-                    <div class="roadmap-body-box-title-sub">
-                        <div class="circle"></div>
-                        <p>به مدت' . $db['time'] . '  ساعت</p>
+                        <pre>' . $db['des'] . '</pre>
                     </div>
                 </div>
             </div>
@@ -642,16 +633,7 @@ function RoadmapEn()
                     <h3>' . $db['title'] . '</h3>
                     <img src="./Assets/images/line-title.png" alt="">
                     <div class="roadmap-body-box-title-sub">
-                        <div class="circle"></div>
-                        <p>' . $db['title'] . '</p>
-                    </div>
-                    <div class="roadmap-body-box-title-sub">
-                        <div class="circle"></div>
-                        <p>تعداد جلسات :' . $db['number'] . '</p>
-                    </div>
-                    <div class="roadmap-body-box-title-sub">
-                        <div class="circle"></div>
-                        <p>به مدت' . $db['time'] . '  ساعت</p>
+                        <pre>' . $db['des'] . '</pre>
                     </div>
                 </div>
             </div>
@@ -691,16 +673,7 @@ function RoadmapFn()
                     <h3>' . $db['title'] . '</h3>
                     <img src="./Assets/images/line-title.png" alt="">
                     <div class="roadmap-body-box-title-sub">
-                        <div class="circle"></div>
-                        <p>' . $db['title'] . '</p>
-                    </div>
-                    <div class="roadmap-body-box-title-sub">
-                        <div class="circle"></div>
-                        <p>تعداد جلسات :' . $db['number'] . '</p>
-                    </div>
-                    <div class="roadmap-body-box-title-sub">
-                        <div class="circle"></div>
-                        <p>به مدت' . $db['time'] . '  ساعت</p>
+                        <pre>' . $db['des'] . '</pre>
                     </div>
                 </div>
             </div>
@@ -717,16 +690,7 @@ function RoadmapFn()
                     <h3>' . $db['title'] . '</h3>
                     <img src="./Assets/images/line-title.png" alt="">
                     <div class="roadmap-body-box-title-sub">
-                        <div class="circle"></div>
-                        <p>' . $db['title'] . '</p>
-                    </div>
-                    <div class="roadmap-body-box-title-sub">
-                        <div class="circle"></div>
-                        <p>تعداد جلسات :' . $db['number'] . '</p>
-                    </div>
-                    <div class="roadmap-body-box-title-sub">
-                        <div class="circle"></div>
-                        <p>به مدت' . $db['time'] . '  ساعت</p>
+                        <pre>' . $db['des'] . '</pre>
                     </div>
                 </div>
             </div>
@@ -766,16 +730,7 @@ function RoadmapGr()
                     <h3>' . $db['title'] . '</h3>
                     <img src="./Assets/images/line-title.png" alt="">
                     <div class="roadmap-body-box-title-sub">
-                        <div class="circle"></div>
-                        <p>' . $db['title'] . '</p>
-                    </div>
-                    <div class="roadmap-body-box-title-sub">
-                        <div class="circle"></div>
-                        <p>تعداد جلسات :' . $db['number'] . '</p>
-                    </div>
-                    <div class="roadmap-body-box-title-sub">
-                        <div class="circle"></div>
-                        <p>به مدت' . $db['time'] . '  ساعت</p>
+                        <pre>' . $db['des'] . '</pre>
                     </div>
                 </div>
             </div>
@@ -792,16 +747,7 @@ function RoadmapGr()
                     <h3>' . $db['title'] . '</h3>
                     <img src="./Assets/images/line-title.png" alt="">
                     <div class="roadmap-body-box-title-sub">
-                        <div class="circle"></div>
-                        <p>' . $db['title'] . '</p>
-                    </div>
-                    <div class="roadmap-body-box-title-sub">
-                        <div class="circle"></div>
-                        <p>تعداد جلسات :' . $db['number'] . '</p>
-                    </div>
-                    <div class="roadmap-body-box-title-sub">
-                        <div class="circle"></div>
-                        <p>به مدت' . $db['time'] . '  ساعت</p>
+                        <pre>' . $db['des'] . '</pre>
                     </div>
                 </div>
             </div>

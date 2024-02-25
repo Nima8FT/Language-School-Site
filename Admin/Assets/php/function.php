@@ -113,7 +113,7 @@ function HtmlRow($Table, $Exc)
                         if (str_contains($val, '.jpg') || str_contains($val, '.png') || str_contains($val, '.gif')) {
                             $split = explode('..', $val);
                             $img_name = 'Assets/' . $split[1];
-                            $html .= '<td style="display:none;" class="main__table_' . $key . '" id="' . $key . '"><img src="' . $img_name . '" alt="' . $response[$i]['name'] . '"></td>';
+                            $html .= '<td style="display:none;" class="main__table_' . $key . '" id="' . $key . '"><img src="' . $img_name . '" alt="' . $img_name . '"></td>';
                         } else
                             $html .= '<td style="display:none;" class="main__table_' . $key . '" id="' . $key . '"><div>' . htmlspecialchars($val) . '</div></td>';
                     }
@@ -122,7 +122,7 @@ function HtmlRow($Table, $Exc)
                     if (str_contains($val, '.jpg') || str_contains($val, '.png') || str_contains($val, '.gif')) {
                         $split = explode('..', $val);
                         $img_name = 'Assets/' . $split[1];
-                        $html .= '<td class="main__table_' . $key . '" id="' . $key . '"><img src="' . $img_name . '" alt="' . $response[$i]['name'] . '"></td>';
+                        $html .= '<td class="main__table_' . $key . '" id="' . $key . '"><img src="' . $img_name . '" alt="' . $img_name . '"></td>';
                     } else
                         $html .= '<td class="main__table_' . $key . '" id="' . $key . '"><div>' . htmlspecialchars($val) . '</div></td>';
             }
@@ -233,8 +233,7 @@ function UploadFiles($img_name, $Table)
                 $img_dir = __DIR__ . '/../img/slider/' . $img_name . '.' . $format;
             } else if ($Table == "comments") {
                 $img_dir = __DIR__ . '/../img/comments/' . $img_name . '.' . $format;
-            }
-            else if($Table == "roadmap") {
+            } else if ($Table == "roadmap") {
                 $img_dir = __DIR__ . '/../img/roadmap/' . $img_name . '.' . $format;
             }
 

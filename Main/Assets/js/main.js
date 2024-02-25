@@ -4,7 +4,7 @@ $(document).ready(function () {
   $('.french-row').css('display', 'none');
   $('.germany-row').css('display', 'none');
   $('.english').css('opacity', '1');
-  $('.english div').css('background', '#00336A');
+  $('.english div').css('background', '#419dff');
 
   $(".menu-call").click(function (e) {
     $(document).scrollTop(20000);
@@ -27,7 +27,7 @@ $(document).ready(function () {
     $('.germany').css('opacity', '0.7');
     $('.germany div').css('background', '#c4c4c4');
     $('.french').css('opacity', '1');
-    $('.french div').css('background', '#00336A');
+    $('.french div').css('background', '#419dff');
   });
 
   $('.english').click(function (e) {
@@ -39,7 +39,7 @@ $(document).ready(function () {
     $('.germany').css('opacity', '0.7');
     $('.germany div').css('background', '#c4c4c4');
     $('.english').css('opacity', '1');
-    $('.english div').css('background', '#00336A');
+    $('.english div').css('background', '#419dff');
   });
 
   $('.germany').click(function (e) {
@@ -51,7 +51,7 @@ $(document).ready(function () {
     $('.english').css('opacity', '0.7');
     $('.english div').css('background', '#c4c4c4');
     $('.germany').css('opacity', '1');
-    $('.germany div').css('background', '#00336A');
+    $('.germany div').css('background', '#419dff');
   });
 
   var count_menu = 0;
