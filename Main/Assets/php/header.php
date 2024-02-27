@@ -11,7 +11,7 @@ require_once('function.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sadre Danesh</title>
-    <link rel="stylesheet" href="./Assets/css/styles.css">
+    <link rel="stylesheet" href="./Assets/css/index.css">
 </head>
 
 <body>
@@ -24,25 +24,13 @@ require_once('function.php');
 
             <div class="header-hambergurmenu-title">
                 <a href="index.php">خانه</a>
-                <a href="roadmap.php">دوره ها</a>
-                <div class="header-right-menu-title">
-                    <a class="menu-teacher">اساتید</a>
-
-                    <div class="header-right-menu-title-sub">
-                        <a href="teacher-sadr.php">صدر دانش</a>
-                        <a href="teacher-baghai.php">بقایی</a>
-                    </div>
-                </div>
+                <a href="roadmap.php" style="margin-left: 10px;">دوره ها</a>
+                <a href="teacher-sadr.php">اساتید صدر دانش</a>
+                <a href="teacher-baghai.php">اساتید بقایی</a>
                 <a href="news.php" class="menu-news">اخبار</a>
+                <a href="personal-sadr.php">پرسنل صدر دانش</a>
+                <a href="personal-baghai.php">پرسنل بقایی</a>
                 <a href="aboutus.php" class="menu-aboutus">درباره ما</a>
-                <div class="header-right-menu-title">
-                    <a class="menu-teacher">پرسنل</a>
-
-                    <div class="header-right-menu-title-sub">
-                        <a href="personal-sadr.php">صدر دانش</a>
-                        <a href="personal-baghai.php">بقایی</a>
-                    </div>
-                </div>
                 <a href="comments.php" class="menu-comments">نظرات</a>
             </div>
 

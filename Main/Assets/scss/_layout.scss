@@ -468,20 +468,30 @@ main {
   }
 
   &-title {
-    @include width-height(250px, 80vh);
+    @include width-height(200px, 75vh);
     @include flex;
     display: none;
     flex-wrap: wrap;
     background: $bg-head;
     position: absolute;
-    top: 70px;
+    top: 55px;
     right: 0;
     border-radius: 10px 0 0 10px;
     z-index: 10;
     padding: 20px;
 
     a {
-      @include width-height(100%, 5px);
+      @include width-height(100%, 45px);
+      font-size: 16px;
+      transition: all ease-in-out 0.2s;
+
+      &:hover {
+        margin-right: 15px;
+      }
+    }
+
+    div {
+      width: 100%;
     }
   }
 
@@ -489,7 +499,7 @@ main {
     @include width-height(100%, 100vh);
     position: absolute;
     background: $color-des;
-    top: 70px;
+    top: 55px;
     left: 0;
     opacity: 0.7;
     display: none;

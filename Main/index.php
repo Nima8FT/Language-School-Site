@@ -32,21 +32,21 @@ require_once('./Assets/php/header.php');
     </div>
     <div class="facilities-item">
         <img src="./Assets/images/online.png" alt="item">
-        <div>
+        <div class="facilities-item-title">
             <h3>آموزش</h3>
             <p>حضوری و مجازی</p>
         </div>
     </div>
     <div class="facilities-item">
         <img src="./Assets/images/support.png" alt="item">
-        <div>
+        <div class="facilities-item-title">
             <h3>مشاوره</h3>
             <p>پاسخگویی آنلاین و تلفنی</p>
         </div>
     </div>
     <div class="facilities-item">
         <img src="./Assets/images/teach.svg" alt="item">
-        <div>
+        <div class="facilities-item-title">
             <h3>پکیج ها</h3>
             <p>TCC, free descution</p>
         </div>

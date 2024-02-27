@@ -1,420 +1,830 @@
-@media (min-width: 700px) and (max-width:1280px) {
+@media (min-width: 1450px) {
+  .boxes {
+    max-width: 1200px;
 
-    .header {
-        padding: 0 2%;
-
-        &-logo {
-
-            &-img {
-                width: 30px;
-            }
-
-            &-title {
-                width: 200px;
-            }
-        }
-
-        &-right-menu {
-            width: 60%;
-            font-size: 16px;
-
-            a {
-                width: 75px;
-            }
-        }
-
-        &-left {
-            a {
-                font-size: 14px;
-            }
-
-            img {
-                width: 25px;
-            }
-        }
+    .boxes-list {
+      max-width: 1000px;
     }
+  }
 
-    .head-title {
+  .teachers {
+    max-width: 1200px;
+  }
 
-        h2 {
-            width: 50%;
-        }
+  .news {
+    max-width: 1500px;
 
-        img {
-            width: 25%;
-        }
+    &-list {
+      max-width: 1300px;
     }
-
-    .show {
-        width: 35%;
-    }
-
-    .box {
-        &-img {
-            width: 300px;
-        }
-
-        &-title {
-            &-top {
-                p {
-                    font-size: 14px;
-                }
-            }
-
-            &-img {
-                bottom: -38px !important;
-            }
-
-            &-main {
-                height: 60% !important;
-
-                h2 {
-                    font-size: 18px;
-                }
-
-                h4 {
-                    font-size: 16px;
-                }
-            }
-        }
-    }
-
-    .teachers-list-box {
-        width: 250px;
-        height: 170px;
-
-        img {
-            width: 80px;
-        }
-
-        &-title {
-            h4 {
-                font-size: 18px;
-                margin-top: 15px;
-            }
-
-            p {
-                font-size: 14px;
-            }
-        }
-    }
-
-    .news-list-box {
-        img {
-            width: 230px;
-            height: 150px;
-        }
-
-        &-title {
-            width: 50%;
-            height: 150px;
-
-            h4 {
-                font-size: 18px;
-            }
-
-            p {
-                font-size: 14px;
-            }
-        }
-    }
-
-    .about-title {
-        h3 {
-            font-size: 18px !important;
-        }
-
-        p {
-            font-size: 14px !important;
-        }
-    }
-
-    .footer {
-        &-top {
-            flex-wrap: wrap;
-
-            &-right {
-                width: 100%;
-
-                &-img {
-                    .logo-title-footer {
-                        width: 250px;
-                    }
-                }
-
-                &-title {
-
-                    h4 {
-                        font-size: 18px;
-                    }
-
-                    p {
-                        font-size: 14px;
-                    }
-
-                    &-right {
-                        justify-content: start;
-
-                        &-top {
-                            width: 70%;
-                        }
-
-                        &-bottom {
-                            width: 70%;
-                        }
-                    }
-                }
-            }
-        }
-
-        &-bottom {
-            font-size: 14px;
-        }
-    }
-
-    .comments-bottom-box {
-        width: 50%;
-
-        img {
-            width: 130px;
-        }
-
-        h3 {
-            font-size: 18px;
-        }
-
-        p {
-            font-size: 14px;
-        }
-    }
+  }
 }
 
-@media (max-width:700px) {
-
-    .header {
-
-        &-right {
-            width: 80%;
-
-            img {
-                margin-left: 5px;
-            }
-
-            &-menu {
-                display: none;
-            }
-        }
-
-        &-left {
-            display: none;
-        }
-
-        &-hambergurmenu {
-            display: flex;
-        }
+@media (min-width: 800px) and (max-width: 1100px) {
+  .header-right {
+    img {
+      width: 25px;
     }
 
-    .facilities {
-        @include width-height(95%, 240px);
-        flex-wrap: wrap;
-
-        &-item {
-            margin: 15px;
-            width: 40%;
-        }
+    h1 {
+      font-size: 16px;
     }
 
-    .head-title {
+    &-menu {
+      width: 59%;
+
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .facilities {
+    width: 90%;
+
+    &-item {
+      img {
+        width: 40px;
+      }
+
+      &-title {
+        h3 {
+          font-size: 16px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .head-title {
+    img {
+      width: 25%;
+    }
+
+    h2 {
+      font-size: 22px;
+    }
+  }
+
+  .show {
+    width: 30%;
+  }
+
+  .news-list-box {
+    img {
+      width: 240px;
+    }
+  }
+
+  .comments-bottom-box {
+    width: 40%;
+  }
+
+  .footer-top-right-img {
+    img {
+      width: 35px;
+    }
+
+    h1 {
+      font-size: 22px;
+    }
+  }
+
+  .roadmap {
+    width: 100%;
+    overflow-x: hidden;
+
+    &-head {
+      width: 80%;
+    }
+  }
+
+  .rtl-roadmap-body-box {
+    .roadmap-body-box-img {
+      width: 200px;
+    }
+
+    .roadmap-body-box-circle {
+      width: 120px;
+    }
+
+    .roadmap-body-box-title {
+      right: 230px;
+
+      h3 {
+        font-size: 16px;
+      }
+
+      img {
+        width: 140px;
+      }
+
+      .roadmap-body-box-title-sub {
+        pre {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .ltr-roadmap-body-box {
+    .roadmap-body-box-img {
+      width: 200px;
+    }
+
+    .roadmap-body-box-circle {
+      width: 120px;
+    }
+
+    .roadmap-body-box-title {
+      text-align: left;
+      left: 230px;
+
+      h3 {
+        font-size: 16px;
+      }
+
+      img {
+        width: 140px;
+      }
+
+      .roadmap-body-box-title-sub {
+        pre {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) and (max-width: 800px) {
+  .header {
+    &-right {
+      width: 70%;
+
+      img {
+        margin-left: 5px;
+        width: 30px;
+      }
+
+      h1 {
+        font-size: 18px;
+      }
+
+      &-menu {
+        display: none;
+      }
+    }
+
+    &-left {
+      display: none;
+    }
+
+    &-hambergurmenu {
+      display: flex;
+    }
+  }
+
+  .facilities {
+    @include width-height(95%, 240px);
+    flex-wrap: wrap;
+
+    &-item {
+      margin: 15px;
+      width: 40%;
+
+      img {
+        width: 45px;
+      }
+
+      &-title {
+        h3 {
+          font-size: 16px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .slider-container {
+    height: 70vh;
+
+    svg {
+      width: 15px;
+    }
+
+    .slider-btn {
+      padding: 5px;
+    }
+  }
+
+  .head-title {
+    h2 {
+      width: 100%;
+      font-size: 20px;
+    }
+
+    img {
+      width: 12%;
+    }
+  }
+
+  .show {
+    @include width-height(40%, 100%);
+  }
+
+  .news-list-box {
+    height: 170px;
+
+    img {
+      width: 170px;
+      height: 140px;
+    }
+
+    &-title {
+      height: 160px;
+
+      h4 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .about-title {
+    img {
+      width: 370px;
+      height: 200px;
+    }
+
+    div {
+      h3 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .comments-bottom {
+    justify-content: start;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+
+    &-box {
+      width: 100%;
+
+      img {
+        width: 100px;
+      }
+
+      h3 {
+        font-size: 14px;
+      }
+
+      p {
+        font-size: 13px;
+        -webkit-line-clamp: 5;
+      }
+    }
+  }
+
+  .box {
+    img {
+      width: 250px;
+    }
+
+    &-title {
+      height: 44%;
+
+      &-img {
+        top: 160px;
+      }
+
+      &-top {
+        height: 40% !important;
+        font-size: 14px;
+      }
+
+      &-main {
         h2 {
-            width: 100%;
+          font-size: 16px;
         }
 
-        img {
-            width: 12%;
+        h4 {
+          font-size: 14px;
         }
+      }
+
+      &-bottom {
+        display: none !important;
+      }
     }
+  }
 
-    .show {
-        @include width-height(50%, 100%);
-    }
+  .teachers-list {
+    justify-content: start;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
 
-    .news-list-box {
-        height: 170px;
+    &-box {
+      @include width-height(250px, 150px);
 
-        img {
-            width: 100px;
-            height: 140px;
+      img {
+        width: 70px;
+      }
+
+      &-title {
+        width: 200px;
+
+        h4 {
+          font-size: 18px;
+          margin-top: 10px;
         }
 
-        &-title {
-            height: 160px;
-
-            h4 {
-                font-size: 18px;
-            }
-
-            p {
-                font-size: 14px;
-            }
+        p {
+          font-size: 14px;
         }
+      }
     }
+  }
 
-    .about-title {
-        div {
-            h3 {
-                font-size: 18px;
-            }
+  .footer {
+    &-top {
+      flex-wrap: wrap;
 
-            p {
-                font-size: 14px;
-            }
-        }
-    }
+      &-right {
+        width: 100%;
 
-    .comments-bottom {
-        flex-wrap: nowrap;
-        overflow-x: scroll;
+        &-img {
+          img {
+            width: 40px;
+          }
 
-        &-box {
-            width: 100%;
-
-            img {
-                width: 100px;
-            }
-
-            h3 {
-                font-size: 14px;
-            }
-
-            p {
-                font-size: 13px;
-                -webkit-line-clamp: 5;
-            }
-        }
-    }
-
-    .box {
-        img {
+          .logo-title-footer {
             width: 250px;
+            font-size: 18px;
+          }
         }
 
         &-title {
-            height: 44%;
+          h4 {
+            font-size: 18px;
+          }
 
-            &-img {
-                bottom: -60px;
-            }
+          p {
+            font-size: 14px;
+          }
+
+          &-right {
+            justify-content: start;
 
             &-top {
-                height: 40% !important;
-                font-size: 14px;
-            }
-
-            &-main {
-                h2 {
-                    font-size: 16px;
-                }
-
-                h4 {
-                    font-size: 14px;
-                }
+              width: 70%;
             }
 
             &-bottom {
-                display: none !important;
+              width: 70%;
             }
+          }
         }
-
+      }
     }
 
-    .teachers-list {
-        flex-wrap: nowrap;
-        overflow-x: scroll;
+    &-bottom {
+      font-size: 14px;
+    }
+  }
 
-        &-box {
-            @include width-height(250px, 150px);
+  .boxes-list {
+    justify-content: start;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
 
-            img {
-                width: 70px;
-            }
+    .box {
+      overflow-x: unset !important;
+      overflow-y: unset !important;
+    }
+  }
 
-            &-title {
-                width: 200px;
+  .header-logo-img {
+    width: 50px;
+  }
 
-                h4 {
-                    font-size: 18px;
-                    margin-top: 10px;
-                }
+  .header-logo-title {
+    width: 250px;
+  }
 
-                p {
-                    font-size: 14px;
-                }
-            }
-        }
+  .news {
+    width: 100%;
+  }
+
+  .rtl-roadmap-body-box {
+    .roadmap-body-box-img {
+      width: 120px;
+      right: 10px;
     }
 
-    .footer {
-        &-top {
-            flex-wrap: wrap;
+    .roadmap-body-box-circle {
+      width: 70px;
+    }
 
-            &-right {
-                width: 100%;
+    .roadmap-body-box-title {
+      right: 135px;
 
-                &-img {
-                    .logo-title-footer {
-                        width: 250px;
-                    }
-                }
+      h3 {
+        font-size: 14px;
+      }
 
-                &-title {
+      img {
+        width: 120px;
+      }
 
-                    h4 {
-                        font-size: 18px;
-                    }
+      .roadmap-body-box-title-sub {
+        pre {
+          font-size: 10px;
+        }
+      }
+    }
+  }
 
-                    p {
-                        font-size: 14px;
-                    }
+  .ltr-roadmap-body-box {
+    .roadmap-body-box-img {
+      width: 120px;
+      left: 10px;
+    }
 
-                    &-right {
-                        justify-content: start;
+    .roadmap-body-box-circle {
+      width: 70px;
+    }
 
-                        &-top {
-                            width: 70%;
-                        }
+    .roadmap-body-box-title {
+      text-align: left;
+      left: 135px;
 
-                        &-bottom {
-                            width: 70%;
-                        }
-                    }
-                }
-            }
+      h3 {
+        font-size: 14px;
+      }
+
+      img {
+        width: 120px;
+      }
+
+      .roadmap-body-box-title-sub {
+        pre {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    &-right {
+      width: 80%;
+
+      img {
+        margin-left: 5px;
+        width: 25px;
+      }
+
+      h1 {
+        font-size: 16px;
+      }
+
+      &-menu {
+        display: none;
+      }
+    }
+
+    &-left {
+      display: none;
+    }
+
+    &-hambergurmenu {
+      display: flex;
+    }
+  }
+
+  .facilities {
+    @include width-height(95%, 240px);
+    flex-wrap: wrap;
+
+    &-item {
+      margin: 15px;
+      width: 40%;
+
+      img {
+        width: 40px;
+      }
+
+      &-title {
+        h3 {
+          font-size: 14px;
         }
 
-        &-bottom {
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .slider-container {
+    height: 30vh;
+
+    svg {
+      width: 15px;
+    }
+
+    .slider-btn {
+      padding: 5px;
+    }
+  }
+
+  .head-title {
+    h2 {
+      width: 100%;
+      font-size: 18px;
+    }
+
+    img {
+      width: 12%;
+    }
+  }
+
+  .show {
+    @include width-height(70%, 100%);
+  }
+
+  .news-list-box {
+    height: 170px;
+
+    img {
+      width: 100px;
+      height: 140px;
+    }
+
+    &-title {
+      height: 160px;
+
+      h4 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .about-title {
+    img {
+      width: 370px;
+      height: 200px;
+    }
+
+    div {
+      h3 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .comments-bottom {
+    justify-content: start;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+
+    &-box {
+      width: 100%;
+
+      img {
+        width: 100px;
+      }
+
+      h3 {
+        font-size: 14px;
+      }
+
+      p {
+        font-size: 13px;
+        -webkit-line-clamp: 5;
+      }
+    }
+  }
+
+  .box {
+    img {
+      width: 250px;
+    }
+
+    &-title {
+      height: 44%;
+
+      &-img {
+        bottom: -60px;
+      }
+
+      &-top {
+        height: 40% !important;
+        font-size: 14px;
+      }
+
+      &-main {
+        h2 {
+          font-size: 16px;
+        }
+
+        h4 {
+          font-size: 14px;
+        }
+      }
+
+      &-bottom {
+        display: none !important;
+      }
+    }
+  }
+
+  .teachers-list {
+    justify-content: start;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+
+    &-box {
+      @include width-height(250px, 150px);
+
+      img {
+        width: 70px;
+      }
+
+      &-title {
+        width: 200px;
+
+        h4 {
+          font-size: 18px;
+          margin-top: 10px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    &-top {
+      flex-wrap: wrap;
+
+      &-right {
+        width: 100%;
+
+        &-img {
+          img {
+            width: 40px;
+          }
+
+          .logo-title-footer {
+            width: 250px;
+            font-size: 18px;
+          }
+        }
+
+        &-title {
+          h4 {
+            font-size: 18px;
+          }
+
+          p {
             font-size: 14px;
+          }
+
+          &-right {
+            justify-content: start;
+
+            &-top {
+              width: 70%;
+            }
+
+            &-bottom {
+              width: 70%;
+            }
+          }
         }
+      }
     }
 
-    .boxes-list {
-        flex-wrap: nowrap;
-        overflow-x: scroll;
+    &-bottom {
+      font-size: 14px;
+    }
+  }
 
-        .box {
-            overflow-x: unset !important;
-            overflow-y: unset !important;
+  .boxes-list {
+    justify-content: start;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+
+    .box {
+      overflow-x: unset !important;
+      overflow-y: unset !important;
+    }
+  }
+
+  .header-logo-img {
+    width: 50px;
+  }
+
+  .header-logo-title {
+    width: 250px;
+  }
+
+  .news {
+    width: 100%;
+  }
+
+  .roadmap {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .rtl-roadmap-body-box {
+    right: -80px;
+
+    .roadmap-body-box-img {
+      width: 100px;
+      right: 10px;
+    }
+
+    .roadmap-body-box-circle {
+      width: 60px;
+    }
+
+    .roadmap-body-box-title {
+      right: 135px;
+
+      h3 {
+        font-size: 14px;
+      }
+
+      img {
+        width: 80px;
+      }
+
+      .roadmap-body-box-title-sub {
+        pre {
+          font-size: 10px;
         }
+      }
+    }
+  }
+
+  .ltr-roadmap-body-box {
+    left: -80px;
+
+    .roadmap-body-box-img {
+      width: 100px;
+      left: 10px;
     }
 
-    .first-box {
-        margin-right: 1350px !important;
+    .roadmap-body-box-circle {
+      width: 60px;
     }
 
-    .header-logo-img {
-        width: 50px;
-    }
+    .roadmap-body-box-title {
+      left: 135px;
 
-    .header-logo-title {
-        width: 250px;
+      h3 {
+        font-size: 14px;
+      }
+
+      img {
+        width: 80px;
+      }
+
+      .roadmap-body-box-title-sub {
+        pre {
+          font-size: 10px;
+        }
+      }
     }
+  }
 }
